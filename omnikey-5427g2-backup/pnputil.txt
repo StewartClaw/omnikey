@@ -1,0 +1,100 @@
+﻿
+> Instance ID:                HID\VID_076B&PID_5428&MI_00\9&7f3223c&0&0000
+  Device Description:         HID Keyboard Device
+  Class Name:                 Keyboard
+  Class GUID:                 {4d36e96b-e325-11ce-bfc1-08002be10318}
+  Manufacturer Name:          (Standard keyboards)
+  Status:                     Started
+  Driver Name:                keyboard.inf
+> Hardware IDs:               HID\VID_076B&PID_5428&REV_0100&MI_00
+>                             HID\VID_076B&PID_5428&MI_00
+>                             HID\VID_076B&UP:0001_U:0006
+                              HID_DEVICE_SYSTEM_KEYBOARD
+                              HID_DEVICE_UP:0001_U:0006
+                              HID_DEVICE
+  Matching Drivers:
+      Driver Name:            keyboard.inf
+      Provider Name:          Microsoft
+      Class Name:             Keyboard
+      Class GUID:             {4d36e96b-e325-11ce-bfc1-08002be10318}
+      Driver Version:         06/21/2006 10.0.26100.9818
+      Signer Name:            Microsoft Windows
+      Matching Device ID:     HID_DEVICE_SYSTEM_KEYBOARD
+      Driver Rank:            00FF1003
+> Instance ID:                USB\VID_076B&PID_5428&MI_00\8&29924a2d&0&0000
+  Device Description:         USB Input Device
+  Class Name:                 HIDClass
+  Class GUID:                 {745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+  Manufacturer Name:          (Standard system devices)
+  Status:                     Started
+  Driver Name:                input.inf
+> Hardware IDs:               USB\VID_076B&PID_5428&REV_0100&MI_00
+>                             USB\VID_076B&PID_5428&MI_00
+> Compatible IDs:             USB\COMPAT_VID_076b&Class_03&SubClass_00&Prot_01
+>                             USB\COMPAT_VID_076b&Class_03&SubClass_00
+>                             USB\COMPAT_VID_076b&Class_03
+                              USB\Class_03&SubClass_00&Prot_01
+                              USB\Class_03&SubClass_00
+                              USB\Class_03
+  Matching Drivers:
+      Driver Name:            input.inf
+      Provider Name:          Microsoft
+      Class Name:             HIDClass
+      Class GUID:             {745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+      Driver Version:         06/21/2006 10.0.26100.9974
+      Signer Name:            Microsoft Windows
+      Matching Device ID:     USB\Class_03
+      Driver Rank:            00FF3205
+> Instance ID:                USB\VID_076B&PID_5428&MI_01\8&29924a2d&0&0001
+  Device Description:         5427 CK
+  Class Name:                 Unknown
+  Class GUID:                 Unknown
+  Manufacturer Name:          Unknown
+  Status:                     Problem
+  Problem Code:               28 (0x1C) [CM_PROB_FAILED_INSTALL]
+  Problem Status:             0xC0000490
+> Hardware IDs:               USB\VID_076B&PID_5428&REV_0100&MI_01
+>                             USB\VID_076B&PID_5428&MI_01
+> Compatible IDs:             USB\COMPAT_VID_076b&Class_02&SubClass_0c&Prot_07
+>                             USB\COMPAT_VID_076b&Class_02&SubClass_0c
+>                             USB\COMPAT_VID_076b&Class_02
+                              USB\Class_02&SubClass_0c&Prot_07
+                              USB\Class_02&SubClass_0c
+                              USB\Class_02
+  
+  Instance ID:                
+BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&0001000a_PID&ffff\8&282fae03&0&289A4B7BAC74_C00000000
+  Device Description:         Arctis Nova 7X Avrcp Transport
+  Class Name:                 Bluetooth
+  Class GUID:                 {e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
+  Manufacturer Name:          Microsoft
+  Status:                     Started
+  Driver Name:                microsoft_bluetooth_avrcptransport.inf
+  Hardware IDs:               BTHENUM\{0000110e-0000-1000-8000-00805f9b34fb}_VID&0001000a_PID&ffff
+> Instance ID:                USB\VID_076B&PID_5428\010100533056533934055B4634254630
+  Device Description:         USB Composite Device
+  Class Name:                 USB
+  Class GUID:                 {36fc9e60-c465-11cf-8056-444553540000}
+  Manufacturer Name:          (Standard USB Host Controller)
+  Status:                     Started
+  Driver Name:                usb.inf
+> Hardware IDs:               USB\VID_076B&PID_5428&REV_0100
+>                             USB\VID_076B&PID_5428
+> Compatible IDs:             USB\COMPAT_VID_076B&DevClass_00&SubClass_00&Prot00
+>                             USB\COMPAT_VID_076B&DevClass_00&SubClass_00
+>                             USB\COMPAT_VID_076B&DevClass_00
+                              USB\DevClass_00&SubClass_00&Prot_00
+                              USB\DevClass_00&SubClass_00
+                              USB\DevClass_00
+                              USB\COMPOSITE
+  Matching Drivers:
+      Driver Name:            usb.inf
+      Provider Name:          Microsoft
+      Class Name:             USB
+      Class GUID:             {36fc9e60-c465-11cf-8056-444553540000}
+      Driver Version:         06/21/2006 10.0.26100.9818
+      Signer Name:            Microsoft Windows
+      Matching Device ID:     USB\COMPOSITE
+
+
+

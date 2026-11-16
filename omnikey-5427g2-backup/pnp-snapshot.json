@@ -1,0 +1,1223 @@
+﻿{
+    "CapturedAt":  "2026-11-16T13:45:54",
+    "Computer":  "<PC-NAME>",
+    "OS":  "Microsoft Windows 11 Home 10.0.26300.0",
+    "WorkbenchVersion":  "2.7.0",
+    "Devices":  [
+                    {
+                        "FriendlyName":  "HID Keyboard Device",
+                        "Class":  "Keyboard",
+                        "Status":  "OK",
+                        "InstanceId":  "HID\\VID_076B\u0026PID_5428\u0026MI_00\\9\u00267F3223C\u00260\u00260000",
+                        "Properties":  [
+                                           {
+                                               "Key":  "DEVPKEY_Device_DeviceDesc",
+                                               "Value":  "HID Keyboard Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HardwareIds",
+                                               "Value":  [
+                                                             "HID\\VID_076B\u0026PID_5428\u0026REV_0100\u0026MI_00",
+                                                             "HID\\VID_076B\u0026PID_5428\u0026MI_00",
+                                                             "HID\\VID_076B\u0026UP:0001_U:0006",
+                                                             "HID_DEVICE_SYSTEM_KEYBOARD",
+                                                             "HID_DEVICE_UP:0001_U:0006",
+                                                             "HID_DEVICE"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Service",
+                                               "Value":  "kbdhid"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Class",
+                                               "Value":  "Keyboard"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ClassGuid",
+                                               "Value":  "{4D36E96B-E325-11CE-BFC1-08002BE10318}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Driver",
+                                               "Value":  "{4d36e96b-e325-11ce-bfc1-08002be10318}\\0002"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigFlags",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Manufacturer",
+                                               "Value":  "(Standard keyboards)"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PDOName",
+                                               "Value":  "\\Device\\000000f5"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Capabilities",
+                                               "Value":  "160"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusTypeGuid",
+                                               "Value":  "{EEAF37D0-1963-47C4-AA48-72476DB7CF49}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LegacyBusType",
+                                               "Value":  "15"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusNumber",
+                                               "Value":  "6"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_EnumeratorName",
+                                               "Value":  "HID"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Address",
+                                               "Value":  "1"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PowerData",
+                                               "Value":  [
+                                                             "56",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "25",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "4",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicy",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicyDefault",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallState",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BaseContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_NAME",
+                                               "Value":  "HID Keyboard Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstanceId",
+                                               "Value":  "HID\\VID_076B\u0026PID_5428\u0026MI_00\\9\u00267F3223C\u00260\u00260000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DevNodeStatus",
+                                               "Value":  "25165834"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ProblemCode",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Parent",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\u0026MI_00\\8\u002629924a2d\u00260\u00260000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_SafeRemovalRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsPresent",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HasProblem",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 15",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsRebootRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ReportedDeviceIdsHash",
+                                               "Value":  "4084256966"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InLocalMachineContainer",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Stack",
+                                               "Value":  [
+                                                             "\\Driver\\kbdclass",
+                                                             "\\Driver\\kbdhid",
+                                                             "\\Driver\\HidUsb"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "{A8B865DD-2E3D-4094-AD97-E593A70C75D6} 26",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "{3464F7A4-2444-40B1-980A-E0903CB6D912} 10",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigurationId",
+                                               "Value":  "keyboard.inf:HID_DEVICE_SYSTEM_KEYBOARD,HID_Keyboard_Inst.NT"
+                                           },
+                                           {
+                                               "Key":  "{80497100-8C73-48B9-AAD9-CE387E19C56E} 6",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "{80497100-8C73-48B9-AAD9-CE387E19C56E} 7",
+                                               "Value":  "17294086456188334336"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 3",
+                                               "Value":  "keyboard.inf:4f8793e84cf0d398:HID_Keyboard_Inst.NT:10.0.26100.9818:HID_DEVICE_SYSTEM_KEYBOARD"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 10",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\u0026MI_00\\8\u002629924a2d\u00260\u00260000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_FirstInstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LastArrivalDate",
+                                               "Value":  "11/16/2026 13:38:22"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverDate",
+                                               "Value":  "06/20/2006 18:00:00"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverVersion",
+                                               "Value":  "10.0.26100.9818"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverDesc",
+                                               "Value":  "HID Keyboard Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverInfPath",
+                                               "Value":  "keyboard.inf"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverInfSection",
+                                               "Value":  "HID_Keyboard_Inst.NT"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_MatchingDeviceId",
+                                               "Value":  "HID_DEVICE_SYSTEM_KEYBOARD"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverProvider",
+                                               "Value":  "Microsoft"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverRank",
+                                               "Value":  "16715779"
+                                           }
+                                       ]
+                    },
+                    {
+                        "FriendlyName":  "USB Input Device",
+                        "Class":  "HIDClass",
+                        "Status":  "OK",
+                        "InstanceId":  "USB\\VID_076B\u0026PID_5428\u0026MI_00\\8\u002629924A2D\u00260\u00260000",
+                        "Properties":  [
+                                           {
+                                               "Key":  "DEVPKEY_Device_DeviceDesc",
+                                               "Value":  "USB Input Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HardwareIds",
+                                               "Value":  [
+                                                             "USB\\VID_076B\u0026PID_5428\u0026REV_0100\u0026MI_00",
+                                                             "USB\\VID_076B\u0026PID_5428\u0026MI_00"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_CompatibleIds",
+                                               "Value":  [
+                                                             "USB\\COMPAT_VID_076b\u0026Class_03\u0026SubClass_00\u0026Prot_01",
+                                                             "USB\\COMPAT_VID_076b\u0026Class_03\u0026SubClass_00",
+                                                             "USB\\COMPAT_VID_076b\u0026Class_03",
+                                                             "USB\\Class_03\u0026SubClass_00\u0026Prot_01",
+                                                             "USB\\Class_03\u0026SubClass_00",
+                                                             "USB\\Class_03"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Service",
+                                               "Value":  "HidUsb"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Class",
+                                               "Value":  "HIDClass"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ClassGuid",
+                                               "Value":  "{745A17A0-74D3-11D0-B6FE-00A0C90F57DA}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Driver",
+                                               "Value":  "{745a17a0-74d3-11d0-b6fe-00a0c90f57da}\\0013"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigFlags",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Manufacturer",
+                                               "Value":  "(Standard system devices)"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LocationInfo",
+                                               "Value":  "0007.0000.0003.002.001.000.000.000.000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PDOName",
+                                               "Value":  "\\Device\\000000f3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Capabilities",
+                                               "Value":  "128"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusTypeGuid",
+                                               "Value":  "{9D7DEBBC-C85D-11D1-9EB4-006008C3A19A}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LegacyBusType",
+                                               "Value":  "15"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusNumber",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_EnumeratorName",
+                                               "Value":  "USB"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Address",
+                                               "Value":  "1"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PowerData",
+                                               "Value":  [
+                                                             "56",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "25",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "4",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicy",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicyDefault",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallState",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BaseContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_NAME",
+                                               "Value":  "USB Input Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstanceId",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\u0026MI_00\\8\u002629924A2D\u00260\u00260000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DevNodeStatus",
+                                               "Value":  "25165834"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ProblemCode",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusRelations",
+                                               "Value":  "HID\\VID_076B\u0026PID_5428\u0026MI_00\\9\u00267f3223c\u00260\u00260000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Parent",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\\010100533056533934055B4634254630"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Children",
+                                               "Value":  "HID\\VID_076B\u0026PID_5428\u0026MI_00\\9\u00267f3223c\u00260\u00260000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Siblings",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\u0026MI_01\\8\u002629924a2d\u00260\u00260001"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_SafeRemovalRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsPresent",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HasProblem",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 15",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsRebootRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ReportedDeviceIdsHash",
+                                               "Value":  "1293361835"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InLocalMachineContainer",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Stack",
+                                               "Value":  [
+                                                             "\\Driver\\HidUsb",
+                                                             "\\Driver\\usbccgp"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "{A8B865DD-2E3D-4094-AD97-E593A70C75D6} 26",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "{3464F7A4-2444-40B1-980A-E0903CB6D912} 10",
+                                               "Value":  "2"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusReportedDeviceDesc",
+                                               "Value":  "5427 CK"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigurationId",
+                                               "Value":  "input.inf:USB\\Class_03,HID_Inst.NT"
+                                           },
+                                           {
+                                               "Key":  "{80497100-8C73-48B9-AAD9-CE387E19C56E} 6",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 3",
+                                               "Value":  "input.inf:741f41b5c3b20c6e:HID_Inst.NT:10.0.26100.9974:USB\\Class_03"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 10",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\\010100533056533934055B4634254630"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_FirstInstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LastArrivalDate",
+                                               "Value":  "11/16/2026 13:38:22"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LocationPaths",
+                                               "Value":  [
+                                                             "PCIROOT(0)#PCI(0801)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)#USBMI(0)",
+                                                             "PCIROOT(0)#PCI(0801)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)#USB(1)",
+                                                             "ACPI(_SB_)#ACPI(PCI0)#ACPI(GP17)#ACPI(XHC0)#ACPI(RHUB)#ACPI(HSP2)#ACPI(HS01)#USBMI(0)",
+                                                             "ACPI(_SB_)#ACPI(PCI0)#ACPI(GP17)#ACPI(XHC0)#ACPI(RHUB)#ACPI(HSP2)#ACPI(HS01)#USB(1)"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverDate",
+                                               "Value":  "06/20/2006 18:00:00"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverVersion",
+                                               "Value":  "10.0.26100.9974"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverDesc",
+                                               "Value":  "USB Input Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverInfPath",
+                                               "Value":  "input.inf"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverInfSection",
+                                               "Value":  "HID_Inst.NT"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_MatchingDeviceId",
+                                               "Value":  "USB\\Class_03"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverProvider",
+                                               "Value":  "Microsoft"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverRank",
+                                               "Value":  "16724485"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_GenericDriverInstalled",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_AdditionalSoftwareRequested",
+                                               "Value":  "True"
+                                           }
+                                       ]
+                    },
+                    {
+                        "FriendlyName":  "5427 CK",
+                        "Class":  null,
+                        "Status":  "Error",
+                        "InstanceId":  "USB\\VID_076B\u0026PID_5428\u0026MI_01\\8\u002629924A2D\u00260\u00260001",
+                        "Properties":  [
+                                           {
+                                               "Key":  "DEVPKEY_Device_DeviceDesc",
+                                               "Value":  "5427 CK"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HardwareIds",
+                                               "Value":  [
+                                                             "USB\\VID_076B\u0026PID_5428\u0026REV_0100\u0026MI_01",
+                                                             "USB\\VID_076B\u0026PID_5428\u0026MI_01"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_CompatibleIds",
+                                               "Value":  [
+                                                             "USB\\COMPAT_VID_076b\u0026Class_02\u0026SubClass_0c\u0026Prot_07",
+                                                             "USB\\COMPAT_VID_076b\u0026Class_02\u0026SubClass_0c",
+                                                             "USB\\COMPAT_VID_076b\u0026Class_02",
+                                                             "USB\\Class_02\u0026SubClass_0c\u0026Prot_07",
+                                                             "USB\\Class_02\u0026SubClass_0c",
+                                                             "USB\\Class_02"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigFlags",
+                                               "Value":  "64"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LocationInfo",
+                                               "Value":  "0007.0000.0003.002.001.000.000.000.000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PDOName",
+                                               "Value":  "\\Device\\000000f4"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Capabilities",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusTypeGuid",
+                                               "Value":  "{9D7DEBBC-C85D-11D1-9EB4-006008C3A19A}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LegacyBusType",
+                                               "Value":  "15"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusNumber",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_EnumeratorName",
+                                               "Value":  "USB"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Address",
+                                               "Value":  "2"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PowerData",
+                                               "Value":  [
+                                                             "56",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "4",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "25",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "4",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicy",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicyDefault",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallState",
+                                               "Value":  "2"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BaseContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_NAME",
+                                               "Value":  "5427 CK"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstanceId",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\u0026MI_01\\8\u002629924A2D\u00260\u00260001"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DevNodeStatus",
+                                               "Value":  "25175040"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ProblemCode",
+                                               "Value":  "28"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ProblemStatus",
+                                               "Value":  "3221226640"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Parent",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\\010100533056533934055B4634254630"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Siblings",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\u0026MI_00\\8\u002629924a2d\u00260\u00260000"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_SafeRemovalRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsPresent",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HasProblem",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 15",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsRebootRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ReportedDeviceIdsHash",
+                                               "Value":  "361326335"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InLocalMachineContainer",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Stack",
+                                               "Value":  "\\Driver\\usbccgp"
+                                           },
+                                           {
+                                               "Key":  "{A8B865DD-2E3D-4094-AD97-E593A70C75D6} 26",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "{3464F7A4-2444-40B1-980A-E0903CB6D912} 10",
+                                               "Value":  "2"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusReportedDeviceDesc",
+                                               "Value":  "5427 CK"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigurationId",
+                                               "Value":  ""
+                                           },
+                                           {
+                                               "Key":  "{80497100-8C73-48B9-AAD9-CE387E19C56E} 6",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 5",
+                                               "Value":  "3758096936"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 10",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\\010100533056533934055B4634254630"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_FirstInstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LastArrivalDate",
+                                               "Value":  "11/16/2026 13:38:22"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LocationPaths",
+                                               "Value":  [
+                                                             "PCIROOT(0)#PCI(0801)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)#USBMI(1)",
+                                                             "ACPI(_SB_)#ACPI(PCI0)#ACPI(GP17)#ACPI(XHC0)#ACPI(RHUB)#ACPI(HSP2)#ACPI(HS01)#USBMI(1)"
+                                                         ]
+                                           }
+                                       ]
+                    },
+                    {
+                        "FriendlyName":  "USB Composite Device",
+                        "Class":  "USB",
+                        "Status":  "OK",
+                        "InstanceId":  "USB\\VID_076B\u0026PID_5428\\010100533056533934055B4634254630",
+                        "Properties":  [
+                                           {
+                                               "Key":  "DEVPKEY_Device_DeviceDesc",
+                                               "Value":  "USB Composite Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HardwareIds",
+                                               "Value":  [
+                                                             "USB\\VID_076B\u0026PID_5428\u0026REV_0100",
+                                                             "USB\\VID_076B\u0026PID_5428"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_CompatibleIds",
+                                               "Value":  [
+                                                             "USB\\COMPAT_VID_076B\u0026DevClass_00\u0026SubClass_00\u0026Prot00",
+                                                             "USB\\COMPAT_VID_076B\u0026DevClass_00\u0026SubClass_00",
+                                                             "USB\\COMPAT_VID_076B\u0026DevClass_00",
+                                                             "USB\\DevClass_00\u0026SubClass_00\u0026Prot_00",
+                                                             "USB\\DevClass_00\u0026SubClass_00",
+                                                             "USB\\DevClass_00",
+                                                             "USB\\COMPOSITE"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Service",
+                                               "Value":  "usbccgp"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Class",
+                                               "Value":  "USB"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ClassGuid",
+                                               "Value":  "{36FC9E60-C465-11CF-8056-444553540000}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Driver",
+                                               "Value":  "{36fc9e60-c465-11cf-8056-444553540000}\\0007"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigFlags",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Manufacturer",
+                                               "Value":  "(Standard USB Host Controller)"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LocationInfo",
+                                               "Value":  "Port_#0001.Hub_#0004"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PDOName",
+                                               "Value":  "\\Device\\USBPDO-7"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Capabilities",
+                                               "Value":  "148"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusTypeGuid",
+                                               "Value":  "{9D7DEBBC-C85D-11D1-9EB4-006008C3A19A}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LegacyBusType",
+                                               "Value":  "15"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusNumber",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_EnumeratorName",
+                                               "Value":  "USB"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Address",
+                                               "Value":  "1"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PowerData",
+                                               "Value":  [
+                                                             "56",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "25",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "3",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "4",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "1",
+                                                             "0",
+                                                             "0",
+                                                             "0"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicy",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_RemovalPolicyDefault",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallState",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BaseContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_NAME",
+                                               "Value":  "USB Composite Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstanceId",
+                                               "Value":  "USB\\VID_076B\u0026PID_5428\\010100533056533934055B4634254630"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DevNodeStatus",
+                                               "Value":  "25182218"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ProblemCode",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusRelations",
+                                               "Value":  [
+                                                             "USB\\VID_076B\u0026PID_5428\u0026MI_00\\8\u002629924a2d\u00260\u00260000",
+                                                             "USB\\VID_076B\u0026PID_5428\u0026MI_01\\8\u002629924a2d\u00260\u00260001"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Parent",
+                                               "Value":  "USB\\VID_05E3\u0026PID_0610\\6\u00261e009bdf\u00261\u00262"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Children",
+                                               "Value":  [
+                                                             "USB\\VID_076B\u0026PID_5428\u0026MI_00\\8\u002629924a2d\u00260\u00260000",
+                                                             "USB\\VID_076B\u0026PID_5428\u0026MI_01\\8\u002629924a2d\u00260\u00260001"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_SafeRemovalRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ContainerId",
+                                               "Value":  "{B92BD7F4-CC27-5595-9415-0FF29BEB0CF6}"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsPresent",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_HasProblem",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 15",
+                                               "Value":  "True"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_IsRebootRequired",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ReportedDeviceIdsHash",
+                                               "Value":  "4291082203"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InLocalMachineContainer",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_Stack",
+                                               "Value":  [
+                                                             "\\Driver\\usbccgp",
+                                                             "\\Driver\\ACPI",
+                                                             "\\Driver\\USBHUB3"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "{A8B865DD-2E3D-4094-AD97-E593A70C75D6} 26",
+                                               "Value":  "False"
+                                           },
+                                           {
+                                               "Key":  "{3464F7A4-2444-40B1-980A-E0903CB6D912} 10",
+                                               "Value":  "3"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BusReportedDeviceDesc",
+                                               "Value":  "5427 CK"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_ConfigurationId",
+                                               "Value":  "usb.inf:USB\\COMPOSITE,Composite.Dev.NT"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_PhysicalDeviceLocation",
+                                               "Value":  [
+                                                             "130",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "49",
+                                                             "29",
+                                                             "136",
+                                                             "4",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0",
+                                                             "0"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_BiosDeviceName",
+                                               "Value":  "\\_SB.PCI0.GP17.XHC0.RHUB.HSP2.HS01"
+                                           },
+                                           {
+                                               "Key":  "{80497100-8C73-48B9-AAD9-CE387E19C56E} 6",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 3",
+                                               "Value":  "usb.inf:392c3d53461eda3a:Composite.Dev.NT:10.0.26100.9818:USB\\COMPOSITE"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 10",
+                                               "Value":  "USB\\VID_05E3\u0026PID_0610\\6\u00261e009bdf\u00261\u00262"
+                                           },
+                                           {
+                                               "Key":  "{83DA6326-97A6-4088-9453-A1923F573B29} 25",
+                                               "Value":  "0"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_InstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_FirstInstallDate",
+                                               "Value":  "11/16/2026 13:28:57"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LastArrivalDate",
+                                               "Value":  "11/16/2026 13:38:22"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_LocationPaths",
+                                               "Value":  [
+                                                             "PCIROOT(0)#PCI(0801)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)",
+                                                             "ACPI(_SB_)#ACPI(PCI0)#ACPI(GP17)#ACPI(XHC0)#ACPI(RHUB)#ACPI(HSP2)#ACPI(HS01)"
+                                                         ]
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverDate",
+                                               "Value":  "06/20/2006 18:00:00"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverVersion",
+                                               "Value":  "10.0.26100.9818"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverDesc",
+                                               "Value":  "USB Composite Device"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverInfPath",
+                                               "Value":  "usb.inf"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverInfSection",
+                                               "Value":  "Composite.Dev.NT"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_MatchingDeviceId",
+                                               "Value":  "USB\\COMPOSITE"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverProvider",
+                                               "Value":  "Microsoft"
+                                           },
+                                           {
+                                               "Key":  "DEVPKEY_Device_DriverRank",
+                                               "Value":  "16719878"
+                                           },
+                                           {
+                                               "Key":  "{B5A825B8-3907-40B5-ABCA-8451E2453D5F} 3",
+                                               "Value":  "1"
+                                           }
+                                       ]
+                    }
+                ]
+}

@@ -1,0 +1,8 @@
+﻿# Local tooling / scratch
+*.log
+__pycache__/
+.venv/
+# Never commit installers or drivers
+*.msi
+*.exe
+*.zip

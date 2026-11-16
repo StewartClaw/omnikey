@@ -1,0 +1,350 @@
+HID OMNIKEY 5427 G2 - DEVICE INFORMATION FOR RESEARCH
+IT&C 567 End of Semester Project
+Compiled: 2026-11-16
+Repo: https://github.com/StewartClaw/omnikey (private)
+
+Confidence key:
+  [V] verified on our PC (Windows, Workbench API, logs)
+  [L] read from the label photo (could be an OCR/reading error)
+  [I] our inference, not yet confirmed
+
+
+======================================================================
+1. WHAT IT IS
+======================================================================
+A desktop USB + Bluetooth (BLE) RFID / smart card reader made by HID Global.
+"G2" = second generation of the 5427 (the USB name is still "5427 CK").
+It reads both 125 kHz proximity cards and 13.56 MHz smart cards.
+This unit is BYU-issued and loaded with HID iCLASS Elite keys (see section 6).
+
+It has two operating modes:
+  - Keyboard wedge (default as received): it acts like a USB keyboard and
+    types the card number into whatever window has focus.
+  - CCID (PC/SC): it acts like a standard smart card reader, so software can
+    send commands (APDUs) to cards and to the reader itself.
+
+
+======================================================================
+2. LABEL (bottom of the device)
+======================================================================
+[L] Manufacturer ........ HID Global, (c) 2025
+[L] Model ............... OMNIKEY 5427 G2, Rev B
+[L] Made in ............. Philippines
+[L] Part number ......... R54270111-UNI-ELITE
+                          ("UNI" = multi-technology, "ELITE" = iCLASS Elite keys)
+[L] SRD model ........... 5427G2
+[L] FCC ID .............. JQ6-OK5427G2  (US; JQ6 = HID Global grantee code)
+[L] IC (Canada) ......... 2236B-OK5427G2
+[L] Korea (KC) .......... MSIP-CRM-JQ6-OK5427G2
+[L] Brazil (ANATEL) ..... 04823-17-04321
+[L] Taiwan (NCC) ........ CCAL19LP1510T8
+[L] Japan radio ......... R 214-099143 ; also "C-20127"
+[L] Other marks ......... NOM, NYCE, CE, UKCA, UL Listed Accessory (I.T.E. 46LT),
+                          RCM (E4662), WEEE bin, Bluetooth logo
+[L] Note on label ....... "Caution: use only with listed PC"
+[L] Patents ............. www.hidglobal.com/patents
+[L] Work order .......... WO:11103/5947-01A (partly unreadable)
+
+Research tip: search the FCC ID JQ6-OK5427G2 at fcc.report or fccid.io.
+FCC filings usually include internal photos, test reports (antenna and
+frequencies) and sometimes the user manual. Internal photos show the chips
+without opening the case.
+
+
+======================================================================
+3. USB IDENTITY
+======================================================================
+[V] Vendor ID ........... 0x076B (HID Global / OMNIKEY)
+[V] Product ID .......... 0x5428 in keyboard wedge mode
+                          0x5427 in CCID mode
+[V] bcdDevice ........... 0x0100
+[V] USB serial .......... 010100533056533934055B4634254630
+[V] USB product string .. "5427 CK"
+
+USB interfaces, keyboard wedge mode (PID 5428):
+[V] MI_00  HID keyboard               -> Windows "HID Keyboard Device"
+[V] MI_01  CDC EEM (class 02 / subclass 0C / protocol 07)
+           -> "5427 CK", no driver installed (Device Manager Code 28)
+
+USB interfaces, CCID mode (PID 5427):
+[V] MI_00  CCID smart card reader
+           -> generic driver: "Microsoft Usbccid Smartcard Reader (WUDF)"
+           -> with HID driver: "HID OMNIKEY 5427CK" (driver 2.3.4.121)
+[V] MI_01  CDC EEM -> still no driver (Code 28)
+
+What is CDC EEM? A "USB network adapter" class (Ethernet Emulation Model).
+[I] HID's datasheet confirms the reader has an "integrated web-based
+    management tool" and accepts SNMP messages (section 5). The EEM network
+    interface is almost certainly how those are reached. HID ships a
+    "USB CDC EEM Driver" on the 5427CK product page. NOT YET EXPLORED.
+    This is the strongest attack-surface lead (default creds? HTTP vs HTTPS?
+    SNMP community strings?).
+
+PC/SC reader names seen:
+[V] "HID OMNIKEY 5427 CK 0"      (Microsoft generic CCID driver)
+[V] "HID OMNIKEY 5427 CK CL 0"   (HID CCID driver; CL = contactless)
+
+
+======================================================================
+4. FIRMWARE / HARDWARE VERSIONS  (from Workbench diagnostics)
+======================================================================
+[V] Firmware ............ 01.05.0203
+[V] Hardware version .... 00
+[V] SAM version ......... 01.A6   (SAM = secure access module; holds the keys)
+[V] SAM ATR (base64) .... O5WWgLH+VR/HR3JhY2UT
+                          The ATR is the SAM's answer to reset. Decode it
+                          from base64 to hex; it contains readable text.
+[V] SDR version ......... 00
+[V] BLE version ......... 06.07
+[V] Antennas ............ 1
+[V] Workbench type ...... OK5427Gen2Ble
+
+Workbench settings (all it exposes for this model):
+[V] IsEemInterfaceEnabled = true
+[V] OperatingMode         = 0 (CCID). It was keyboard wedge when received.
+
+
+======================================================================
+5. OFFICIAL SPECIFICATIONS
+======================================================================
+Sources: HID datasheet "OMNIKEY 5427CK Reader" PLT-00389 (2025-05-05);
+SmartcardFocus "Omnikey 5427 CK Gen2" product briefing (2025).
+Our unit is the version WITH Bluetooth Low Energy.
+
+GENERAL
+  Base model ............. OMNIKEY 5427CK Gen2
+  Type ................... 13.56 MHz HF + 125 kHz LF smart card reader,
+                           CCID + keyboard wedge, optional BLE
+  Other part numbers ..... R54270101 (standard). Ours: R54270111-UNI-ELITE
+  Country of origin ...... Philippines      HS code: 8471607000
+  Warranty ............... 2 years (manufacturer)
+
+CONTACTLESS - HIGH FREQUENCY (13.56 MHz)
+  iCLASS, iCLASS SE/SR, iCLASS Seos, iCLASS Elite, other SIO-enabled
+  MIFARE Classic, MIFARE Plus, MIFARE DESFire 0.6 / EV1 / EV2
+  MIFARE Ultralight, Ultralight C
+  FeliCa (IDm), CEPAS (CAN)
+  ISO 14443 A/B, up to 848 kbps (depends on card)
+  ISO 15693, up to 26 kbps
+  ISO 18092 NFC Tag types 1, 2, 3, 4, 5
+  T=CL, SmartMX, Student ID in Apple Wallet
+  Apple Enhanced Contactless Polling (ECP) for Apple Wallet credentials
+  FIDO / FIDO2 NFC authenticators (YubiKey NFC, HID Crescendo)
+
+CONTACTLESS - LOW FREQUENCY (125 kHz)
+  HID Prox, Indala Prox, EM Prox, EM4100 / 4102 / 4200 / 4305 / 4450,
+  AWID Prox, Hitag 1/2/3, generic ASK / PSK / FSK
+  (LF Prox has NO cryptography and is easy to clone - a key point for the report)
+
+BLUETOOTH LOW ENERGY
+  Function ............... HID Global Mobile Access Service (mobile IDs for IT access)
+  Read range (mobile) .... adjustable, from close "tap" to long-range
+                           "Twist and Go", up to 2 m (directional antenna)
+  Configuration .......... read settings administered from a mobile phone
+                           during installation (HID mobile app)
+  Our BLE firmware ....... 06.07 [V]
+  Card read range ........ not published (typically a few cm for cards)
+
+HOST INTERFACE
+  USB .................... USB 2.0 Full Speed (12 Mbps); works with USB 3.0
+  Connector / cable ...... USB Type-A, 150 cm (59.1 in) fixed cable
+  Power .................. USB bus powered
+  OS support ............. Windows 11/10/8.1/8/7, Server 2016/2012/2008R2;
+                           Linux Debian 6+, Ubuntu 11.04+, Fedora 15+, openSUSE 11.4+;
+                           macOS; Android 4.x-9.x (CCID + keyboard wedge)
+  PC/SC driver ........... native OS CCID driver (HID driver optional)
+  Keyboard driver ........ native OS HID keyboard (MF-102 layout)
+  APIs ................... PC/SC API, SAM API
+  Default mode ........... CCID per HID. Ours came in keyboard wedge, so it
+                           was CONFIGURED BY BYU. [V]
+
+KEYBOARD WEDGE FEATURES
+  Configurable input and output fields; cascadable custom data fields
+  Card-specific configurations
+  Pre/post keystrokes and shortcuts
+  Big/little endian conversion
+  HEX, BCD, BIN, DEC, ASCII output
+  Bitstream parsing of HID physical access control (PACS) data
+  Filtering and padding of leading/trailing characters
+  Reverse output, including custom, CSN (card serial) and PACS data
+  "Extended keyboard boot" option for hosts with limited USB support
+  Configurable from the host over the HID protocol while in keyboard wedge mode
+
+MANAGEMENT / CONFIGURATION CHANNELS  (attack surface!)
+  1. Integrated web-based management tool (browser-based) "without special
+     training" [I: served over the USB CDC EEM network interface]
+  2. SNMP messages (firmware updates and configuration)
+  3. Configuration cards (tapping a special card reconfigures the reader)
+  4. HID protocol from the host (keyboard wedge mode)
+  5. OMNIKEY Workbench (PC/SC escape commands, CCID mode)
+  6. HID mobile app over BLE (mobile read settings)
+  Developer Tool Kit (DTK) from HID: samples, docs, developer portal
+
+HUMAN INTERFACE / HOUSING
+  Status LED ............. dual colour: white = ready, blue = busy
+  Housing ................ polycarbonate; black cover, light-grey body
+  Card holder ............ removable, for card-present operation
+  Dimensions ............. 71 x 93 x 16 mm (2.79 x 3.66 x 0.63 in)
+  Weight ................. ~100 g (3.53 oz)
+  Mounting ............... optional mounting accessories kit
+
+OPERATING CONDITIONS
+  Operating temp ......... 0 to 55 C (32 to 131 F)
+  Storage temp ........... -20 to 80 C (-4 to 176 F)
+  Humidity ............... 10-95% RH, non-condensing
+  MTBF ................... 500,000 hours
+
+COMPLIANCE
+  USB 2.0; CE, UKCA, FCC, UL, KCC (Korea), RCM (Australia); WEEE, RoHS3, REACH
+
+TODO: confirm which technologies are actually ENABLED on this unit (BYU config).
+
+
+======================================================================
+6. SECURITY-RELEVANT FACTS
+======================================================================
+- "ELITE" = HID iCLASS Elite: a custom key set assigned to one customer
+  (likely BYU), loaded into the SAM by HID. The keys can't be read out. The
+  reader uses them internally to unlock and decode iCLASS/Seos credentials.
+- [I] A factory reset (Workbench MIB "Restore" command) might wipe custom
+  settings or keys. Only HID can reload Elite keys. -> RULE: NO FACTORY RESET.
+- Firmware is HID-signed. It can't be dumped or rolled back. -> RULE: NO FW UPDATE.
+- Settings live in flash with an "active" copy and a "backup" copy.
+  Workbench's code documents the MIB control commands Apply / Reset / Store /
+  Restore / Reboot. Source: OMNIKEY 5x27 Software Developer Guide, Appendix B.2.3.3.
+- Keyboard wedge mode sends the card number as plain keystrokes. Any app with
+  focus, including a keylogger, receives it.
+
+
+======================================================================
+7. SOFTWARE / DRIVERS (correct ones)
+======================================================================
+[V] OMNIKEY Workbench Tool 2.7.0 (Windows)  https://www.hidglobal.com/drivers/49398
+    Electron UI + local .NET server (workbench-server.exe)
+[V] HID OMNIKEY CCID Driver 2.3.4.121       https://www.hidglobal.com/drivers/39910
+    File: sfw-01556-revc-hid-omnikey-ccid-driver-2.3.4.121.zip
+    MSI signed by "HID Global" (Austin, TX) - signature valid
+    Optional MSI feature "CleanRegTree" only removes registry keys on uninstall
+[ ] USB CDC EEM Driver (not installed yet)  -> 5427CK product page:
+    https://www.hidglobal.com/products/omnikey-5427ck
+WRONG software (for FARGO card PRINTERS, not this reader):
+    FARGO Workbench, DTC1250e printer driver
+
+
+======================================================================
+8. WORKBENCH LOCAL API  (attack-surface lead)
+======================================================================
+[V] workbench-server.exe listens on http://localhost:5000 (127.0.0.1 and ::1)
+[V] No authentication: any local program can call it
+[V] CORS: did NOT return Access-Control-Allow-Origin for a foreign Origin
+    (good: a web page can't easily read responses). CSRF/POST not tested yet.
+[V] No Swagger docs (/swagger returns 404). /healthCheck returns 200.
+
+Routes seen (from the server binary and logs):
+  GET  /healthCheck
+  GET  /api/readers/list
+  GET  /api/readers/status                                   (500 on plain GET; likely streaming)
+  GET  /api/readers/<Type>/readerDiagnostic?readerId=<id>
+  GET  /api/readers/<Type>/readerSettings?serialNumber=<serial>
+  POST /api/readers/<Type>/readerSettings?readerId=<id>        (CHANGES settings - careful)
+  GET  /api/driver/ccidDriverDetails
+  GET  /api/driver/settings
+  also: /api/cards, /api/logs, /api/application
+
+Reader types the server knows: OK5427Gen2Ble, OK5427Gen2, OK5427Gen1,
+OK5427Kbw, OK5127*, OK5022, OK5122*, OK5422*, OK3021, OK3121, OK6121,
+GenericApollo, GenericAviator, GenericSC, GenericXChip, D323Smartcard,
+CherrySmartTerminalxx88
+
+Our reader: Type=OK5427Gen2Ble, readerId=c7491c75-808a-4525-9602-dcafc440b789
+(the readerId is generated per session and changes)
+
+Logs (every UI action is logged as an HTTP request):
+  %APPDATA%\HID Global\OMNIKEY Workbench Tool\logs\Workbench-YYYYMMDD.log
+Server docs: ...\OMNIKEY Workbench Tool\resources\backend\wb-core.xml
+  (.NET XML doc comments: PC/SC connection, MIB commands, etc.)
+
+
+======================================================================
+9. EVENT TIMELINE (2026-11-16)
+======================================================================
+13:43  Workbench 2.7.0 installed and started; reader seen as OK5427Kbw
+13:45  Workbench read reader settings (keyboard mode). Not saved.
+13:45:55  Our USB/PnP baseline snapshot (still keyboard mode)
+13:46  Mode switched to CCID via Workbench. Workbench showed an error, but
+       Windows logged the switch: the reader came back as PID 5427.
+~14:10 HID CCID driver 2.3.4.121 installed
+14:14  Diagnostics and settings saved to omnikey-5427g2-backup/
+
+
+======================================================================
+10. OPEN QUESTIONS / RESEARCH LEADS FOR THE TEAM
+======================================================================
+ 1. Install the CDC EEM driver: what network service does the reader expose?
+    IP, ports, web page, SNMP, authentication? (scan only the reader's interface)
+ 1b. Configuration cards: can anyone with a config card reprogram the reader?
+    Is the card authenticated/signed? (Read HID docs before trying anything.)
+ 2. Get the "OMNIKEY 5x27 Software Developer Guide" from HID (escape commands,
+    MIB/config layout, keyboard wedge format options).
+ 3. FCC ID JQ6-OK5427G2: internal photos -> main MCU, SAM chip, BLE chip.
+ 4. Which card technologies are enabled on this unit (BYU config)?
+ 5. What exactly does keyboard wedge mode type for a BYU card (format, bits)?
+    Use test cards only.
+ 6. Does the Workbench API accept cross-site POSTs (CSRF)? Can a local
+    non-admin process change the reader's mode?
+ 7. BLE: what does the reader advertise? Is it pairable? (passive scan first)
+ 8. Compare security: Prox (125 kHz, no crypto) vs iCLASS Elite vs Seos/DESFire.
+ 9. Decode the SAM ATR from section 4.
+
+======================================================================
+11. HOW TO PROTECT IT (hardening checklist for the report's mitigations)
+======================================================================
+Credentials
+  - Prefer Seos or iCLASS SE/Elite (SIO-based, mutual authentication) over
+    125 kHz Prox or MIFARE Classic, which have weak or no cryptography.
+  - Disable unused card technologies in the reader config so it only
+    accepts what the organization actually issues.
+  - Use the card's protected PACS/SIO data, not the CSN (card serial
+    number), as the identifier. A CSN alone is not a secret.
+
+Management interfaces
+  - Disable the EEM web interface when it isn't needed
+    (IsEemInterfaceEnabled = false). If it's needed, set a strong admin password.
+  - Turn off SNMP or restrict it; change default community strings.
+  - Control who holds configuration cards. Treat them like admin keys.
+  - Keep firmware current using ONLY HID-signed updates from hidglobal.com.
+
+Host PC
+  - Keyboard wedge mode: input goes to whatever window has focus. Use CCID
+    mode where possible, so applications ask for card data explicitly.
+  - Workbench's local API (localhost:5000) has no authentication. Install
+    Workbench only on admin machines and close it when not in use.
+  - Least privilege: standard users shouldn't be able to install drivers or
+    run config tools.
+  - Get drivers only from hidglobal.com and verify the "HID Global" code signature.
+
+Physical / lifecycle
+  - Asset-tag readers and track serial numbers (Elite keys are site-specific).
+  - Lost or retired Elite readers: notify HID / security team; don't resell.
+  - Keep a configuration baseline (like omnikey-5427g2-backup/) and review changes.
+
+
+======================================================================
+12. REFERENCES
+======================================================================
+  HID OMNIKEY 5427CK datasheet (PLT-00389, 2025-05-05) - hidglobal.com
+  HID OMNIKEY 5427CK product page: https://www.hidglobal.com/products/omnikey-5427ck
+  OMNIKEY Workbench Tool 2.7.0:   https://www.hidglobal.com/drivers/49398
+  HID OMNIKEY CCID Driver 2.3.4:  https://www.hidglobal.com/drivers/39910
+  HID drivers (filter brand = OMNIKEY): https://hidglobal.com/drivers
+  OMNIKEY 5x27 Software Developer Guide (request from HID / DTK)
+  HID Credential Support Matrix (which cards each reader supports)
+  FCC ID JQ6-OK5427G2 filings (fcc.report / fccid.io)
+  SmartcardFocus 5427 CK Gen2 product briefing (2025)
+  PC/SC spec: pcscworkgroup.com ; USB CCID class spec: usb.org
+
+
+Ground rules (put these in the scoping / RoE document):
+  - BYU-owned device: no factory reset, no firmware update, no key extraction
+  - Use only our own / test credentials; redact card numbers in reports
+  - Record every settings change in omnikey-5427g2-backup/README.md before making it
