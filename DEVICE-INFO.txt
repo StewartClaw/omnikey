@@ -211,8 +211,8 @@ Restore point
     file > "Apply Changes".
 [V] Readable record of every setting: web-config/full-capture/
     raw-mib-reads.json (raw values for every setting), page-values.json,
-    and screenshots of all 21 pages + keyboard wedge pages for all 18
-    card types. Captured read-only; every request checked as a read.
+    and CONSOLE-PAGES.txt (all 21 pages + keyboard wedge pages for all 18
+    card types). Captured read-only; every request checked as a read.
 
 
 ======================================================================
@@ -404,7 +404,7 @@ Server docs: ...\OMNIKEY Workbench Tool\resources\backend\wb-core.xml
        screenshotted to omnikey-5427g2-backup/web-config/ (read-only)
 ~15:30 Full read-only capture of every console page and all 18 keyboard
        wedge card types -> web-config/full-capture/ (scripted headless
-       Chrome; all 516 MIB requests verified as reads)
+       Chrome; all 705 MIB read items verified as reads; screenshots kept locally, text in the repo)
 
 
 ======================================================================

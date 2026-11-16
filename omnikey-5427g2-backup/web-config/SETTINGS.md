@@ -8,9 +8,8 @@ Read-only capture. Nothing on the reader was changed.
 - `ok5x27_ck.cfg` - the console's own "Export Config" output (encrypted, 2537 bytes).
   To restore: open the console > System Config > "Upload Config", choose this file,
   then "Apply Changes". This is the primary way to put the reader back to the BYU baseline.
-- Screenshots of each section are the human-readable fallback:
-  `screenshot-kw-general.jpg`, `screenshot-contactless-polling.jpg`,
-  `screenshot-host-interfaces.jpg`, `screenshot-system-config.jpg`.
+- `full-capture/CONSOLE-PAGES.txt` is the human-readable fallback (every page as text).
+  Screenshots are kept locally in `screenshots/` and are not committed.
 - `index.html`, `webserver.js` - the console's front-end files.
 
 ## Reader info (General Overview)
@@ -51,15 +50,14 @@ Read-only capture. Nothing on the reader was changed.
 Every console page was captured read-only with a scripted headless Chrome
 (`tools/console-capture/final.py`). The script only clicked tab labels and the
 keyboard wedge "Card Type" view selector, and blocked the upload/firmware URLs.
-Every request it sent was checked afterward: 516 MIB items, all reads
+Every request it sent was checked afterward: 705 MIB items, all reads
 (`0d <oid> 05 00`), plus `ff680b` read commands. Nothing was written.
 
 | File | What it is |
 |---|---|
 | `raw-mib-reads.json` | **Best data record.** Every read request the console sent and the reader's raw response, i.e. every setting value, including fields hidden by scrolling. |
-| `page-values.json` | Every visible label and text/number field per page (93 views). Checkboxes are drawn as images, so their state is only in the screenshots and raw reads. |
-| `screens/01..21-*.jpg` | One screenshot per console page and sub-tab. |
-| `screens/kw-by-card-type/` | Keyboard wedge Card Data / Input / Out 1 / Out 2 pages for each of the 18 card types (72 images). |
+| `CONSOLE-PAGES.txt` | **Readable version:** every page row by row; `[x]`/`[ ]` = checkbox, `[value]` = field. Includes the keyboard wedge pages for all 18 card types. |
+| `page-values.json` | Same data as JSON with screen positions (93 views), including checkbox states. |
 
 The `.cfg` export is still the restore point. These files are the readable record.
 
@@ -94,7 +92,7 @@ The `.cfg` export is still the restore point. These files are the readable recor
   Tap In range -40 dBm, Twist and Go range -74 dBm, Tx power -4 dBm.
 - **System Consoles:** Debug Console, empty (nothing typed; typing there sends commands).
 - **About:** FreeRTOS V10.4.3 LTS Patch 2, uIP TCP/IP stack, Atmel AT91 libraries, lwIP AutoIP.
-- Antenna register values for 14443A/B, 15693 and FeliCa are in the screenshots and `page-values.json`.
+- Antenna register values for 14443A/B, 15693 and FeliCa are in `CONSOLE-PAGES.txt`.
 
 ## Security observations (for the report, not acted on)
 - The management console is reachable with NO password. Anyone who can reach the

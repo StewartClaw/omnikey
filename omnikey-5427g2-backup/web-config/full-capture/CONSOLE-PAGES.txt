@@ -1,0 +1,1487 @@
+OMNIKEY 5427 G2 - web console, every page as text
+Captured 2026-11-16 read-only from http://192.168.63.99 (see SETTINGS.md).
+[value] = field value, [x] = checkbox ticked, [ ] = not ticked.
+Keyboard wedge pages are repeated for each of the 18 card types.
+
+======================================================================
+01-general-overview
+======================================================================
+  MAC Address  10:00:00:0F:C1:01
+  Unique ID  010100533056533934055B4634254630
+  Number of CCID Slots  1
+  Contactless Card ATR
+  Please set Access Password to improve the security of your configuration.
+
+======================================================================
+02-reader-information
+======================================================================
+  Build Info  rev 20240920T124303-a0cf96db74e1+, ver 01.05.0203, branch default, build 211, built on: 2024-09-20 10:48:25 CUT
+  SIO Firmware Version  01.a6
+  BLE Firmware Version  06.07
+  Board Type  OMNIKEY 5427 Gen2
+  Hardware Version  00
+  Mod Number  0
+  Host Interfaces  USB
+  Number of Antennas  1
+  Enabled Features  None
+
+======================================================================
+03-kw-general-config
+======================================================================
+  []  Keyboard Wedge Enable  [ ]  Keyboard Layout  US
+  []  []  Output Type  Keyboard Wedge  Hex Output Case  Upper
+  Boot Interface  [ ]  Inter-Keystroke Delay  [20]
+  []  Host Operating System  Windows
+  Card Out Event Keystrokes  []
+  []  Custom CSN Resolution  Bytes
+  Error Keystrokes  []
+  Multi PACS length support  [ ]
+  Allow prestrokes and poststrokes for errors  [ ]
+  Tech order after error  [x]
+  Enable Keyboard Wedge Encryption  [ ]
+  Encryption Key  []
+
+======================================================================
+04-kw-card-data-selection
+======================================================================
+  []  Card Type  Seos  Enable Seos  [x]
+  Data Field  Enabled  Leading Byte  Reverse  ADF Oid  Priv Enc Key OID  Priv MAC Key OID  Auth Key OID  Tag  Offset  Length
+  []  PACS  [ ]  [ ]  None
+  []
+  []  []  CSN  [ ]  None
+  []
+  []  []  Custom 1  [ ]  None  [0]  [0]  [0]  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 2  [ ]  None  [0]  [0]  [0]  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 3  [ ]  None  [0]  [0]  [0]  [0]  [0]  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [x]  None  [24]  [23]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+05-kw-input-data-manipulation
+======================================================================
+  Card Type  Seos
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [x]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+06-kw-out1-data-manipulation
+======================================================================
+  Card Type  Seos  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  DEC  [x]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+07-kw-out2-data-manipulation
+======================================================================
+  Card Type  Seos  Card In Event Keystrokes  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [x]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+08-cl-polling
+======================================================================
+  Polling Frequency  [1]
+  ISO/IEC 14443 Type A  [x]  Tech Order
+  Polling Delay  [0]  Seos
+  []  ISO/IEC 14443 Type B  [ ]
+  []  Removal Delay  [5]  FSK Prox (e.g. HID Prox, AWID)
+  []  FeliCa  [ ]
+  []  Generic ISO14443A
+  []  Removal Persist  [2]
+  []  iCLASS 14443 Type B  [ ]  HID iCLASS
+  []  RF Field Off Delay  [5]
+  []  iCLASS 15693  [ ]  BLE
+  []
+  []  RF Field On Delay  [20]  MIFARE Classic
+  []  ISO/IEC 15693  [ ]
+  []  [ ]  MIFARE Ultralight
+  []  EMD Enable
+  []  Prox  [x]  MIFARE Desfire
+  []  EMD Frame Length  [3]
+  []  BLE  [x]  MIFARE Desfire EV1
+  []
+  []  Enhanced Polling  [ ]  MIFARE Desfire EV2
+  []  Config cards  [x]
+  []  MIFARE Plus
+  []
+  []  FeliCa
+  []
+  []  PIV
+  []
+  []  CEPAS
+  []
+  []  PSK Prox (e.g. Indala)
+  []
+  []  ASK Prox (e.g. EM4450, Acura)
+  []
+  []  Generic ISO14443B
+  []
+  []  Generic ISO15693
+
+======================================================================
+09-cl-antennas
+======================================================================
+  Number of Antennas  [1]
+  []  Antenna Appearance  Combined
+  []  Antenna Selection  Automatic
+  []  Active Antenna  Antenna 0
+  Antenna Index  0
+  Antenna Enable  [x]
+  []  Number of Card Slots  1
+
+======================================================================
+10-cl-leds-buzzer
+======================================================================
+  Legacy keyboard wedge LED & buzzer behavior  [ ]  Step Index  1  2  3  4  5  6
+  Manual LED & buzzer control  [ ]  LED 1  [ ]  [ ]  [x]  [ ]  [ ]  [ ]
+  LED 2  [x]  [ ]  [ ]  [ ]  [ ]  [ ]
+  []  []  Sequence Event  Keyboard Wedge  Save Sequence
+  Buzzer  [x]  [ ]  [ ]  [ ]  [ ]  [ ]
+  []  Sequence Repeat  [0]  Clear Sequence
+  []  Duration (ms)  [1000]  [50]  [50]  [0]  [0]  [0]  Run Sequence
+  Response:
+
+======================================================================
+11-cl-iso14443a
+======================================================================
+  ISO/IEC 14443 Type A  [x]  Frame Delay Time  [1180]  Timing units are in:
+  []  13.56 Mhz cycles
+  Anti-collision  [x]  REQA Timeout  [2712]
+  Anticollision Timeout  [2712]
+  []  Maximum Tx Baud Rate  106k  Halt Timeout  [13560]
+  []  Maximum Rx Baud Rate  106k  Frame Wait Time  [65536]
+  Register #  0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19
+  Antenna 0  [09]  [00]  [01]  [0a]  [0f]  [20]  [c0]  [04]  [5f]  [92]  [05]  [00]  [20]  [04]  [50]  [02]  [00]  [00]  [08]  [80]
+
+======================================================================
+12-cl-iso14443b
+======================================================================
+  ISO/IEC 14443 Type B  [ ]  TR2  [1790]  Timing units are in:
+  []  13.56 Mhz cycles
+  Anti-collision  [x]  REQB Timeout  [10848]
+  Higher Layer Info  []
+  []  Maximum Tx Baud Rate  424k
+  []  Maximum Rx Baud Rate  424k
+  Register #  0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19
+  Antenna 0  [0f]  [0a]  [01]  [0a]  [08]  [00]  [c1]  [24]  [8f]  [92]  [03]  [00]  [09]  [04]  [08]  [04]  [00]  [02]  [1d]  [80]
+
+======================================================================
+13-cl-iso15693
+======================================================================
+  ISO/IEC 15693  [ ]  T2  [4192]  Timing units are in:
+  []  13.56 Mhz cycles
+  Anti-collision  [x]  Wait Time  [12204]
+  Register #  0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19
+  Antenna 0  [0f]  [0c]  [01]  [0a]  [08]  [00]  [c0]  [02]  [8f]  [92]  [02]  [00]  [00]  [83]  [04]  [00]  [1d]  [00]  [24]  [60]
+
+======================================================================
+14-cl-felica
+======================================================================
+  FeliCa  [ ]  Timeout  [42036]  Timing units are in:
+  []  13.56 Mhz cycles
+  []  Maximum Baud Rate  212k
+  Register #  0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19
+  Antenna 0  [0f]  [0a]  [01]  [0a]  [08]  [00]  [c0]  [05]  [8f]  [92]  [02]  [00]  [80]  [05]  [01]  [18]  [00]  [f0]  [19]  [20]
+
+======================================================================
+15-cl-iclass
+======================================================================
+  iCLASS 14443 Type B  [ ]  iCLASS 14443 Type B Tchip  [543]  Timing units are in:
+  []  13.56 Mhz cycles
+  iCLASS 15693  [ ]  iCLASS 15693 Tchip  [2116]
+  No Range Check  [x]  iCLASS 14443 Type B Tout  [6780]
+  High Security Mode  [ ]  iCLASS 15693 Tout  [12204]
+  iCLASS ACTALL Timeout  [27120]
+  Tprog Time  [108480]
+
+======================================================================
+16-cl-prox
+======================================================================
+  Prox Enable  [x]
+  []  ATR Mode  PROX_STANDARD
+  Custom Prox Format
+  Start  [0]  Length  [0]
+  Start  [0]  Length  [0]
+  Start  [0]  Length  [0]
+  Start  [0]  Length  [0]
+  Start  [0]  Length  [0]
+
+======================================================================
+17-cl-ble
+======================================================================
+  BLE Chip UUID  0000000000001000800000177a000002  BLE Enable  [x]
+  Static Random Address  aff70cee365d
+  []  Application Brand  HID Global
+  Tap In  [x]
+  Twist and Go  [ ]
+  []  Tap In Range  -40dBm
+  []  Twist And Go Range  -74dBm
+  []  Tx Power  -4dBm
+
+======================================================================
+18-host-interfaces
+======================================================================
+  Net Mask  [255.255.255.0]
+  Gateway  [192.168.63.1]
+  TFTP Enable  [x]
+  IP Host Name  [ok5x27_ck]
+  EEM Enable  [x]
+  []  Keyboard Wedge USB Endpoint  Endpoint 3
+
+======================================================================
+19-system-config
+======================================================================
+  []  Upload Config
+  []  Restore Default
+  []  []  Encrypt Firmware  Reboot System
+  []  Load Key Layout
+  []  Update BLE Firmware
+  []  Export Config
+  Signing Key  []
+  Verification Key  []
+  Current Access Password  [(empty)]  Set Access Password  [(empty)]
+  Password timeout (mins)  [10]  Confirm Access Password  [(empty)]
+
+======================================================================
+20-system-consoles
+======================================================================
+  [ ]  Scroll down
+  []
+
+======================================================================
+21-about
+======================================================================
+  OMNIKEY ® 5x27 CK
+  The following components are used in this product and are acknowledged as follows:FreeRTOS V10.4.3 LTS Patch 2. Copyright © 2020 Amazon.com, Inc. or its affiliates.FreeRTOS V10.4.3 LTS Patch 2 source code is provided under the terms of the  MIT open source license.uIP TCP/IP stack is Copyright © 2001-2006, Adam Dunkels and the Swedish Institute of Computer Science All rights reserved.AT91 support & libraries is Copyright © 2006, Atmel CorporationAutoIP implementation for the lwIP TCP/IP stack is Copyright © 2007 Dominik Spies kontakt@dspies.de, All rights reserved.
+  1. FreeRTOS
+  2. uIP TCP/IP Stack
+  3. AT91 Libraries
+  4. AutoIP
+
+======================================================================
+Keyboard wedge  /  Seos / card-data
+======================================================================
+  []  Card Type  Seos  Enable Seos  [x]
+  Data Field  Enabled  Leading Byte  Reverse  ADF Oid  Priv Enc Key OID  Priv MAC Key OID  Auth Key OID  Tag  Offset  Length
+  []  PACS  [ ]  [ ]  None
+  []
+  []  []  CSN  [ ]  None
+  []
+  []  []  Custom 1  [ ]  None  [0]  [0]  [0]  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 2  [ ]  None  [0]  [0]  [0]  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 3  [ ]  None  [0]  [0]  [0]  [0]  [0]  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [x]  None  [24]  [23]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  Seos / input
+======================================================================
+  Card Type  Seos
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [x]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  Seos / out1
+======================================================================
+  Card Type  Seos  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  DEC  [x]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  Seos / out2
+======================================================================
+  Card Type  Seos  Card In Event Keystrokes  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [x]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  BLE / card-data
+======================================================================
+  []  Card Type  BLE  Enable BLE  [ ]
+  Data Field  Enabled  Leading Byte  Reverse
+  []  PACS  [x]  [ ]  None
+  []
+  []  []  CSN  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [14]  [20]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  BLE / input
+======================================================================
+  Card Type  BLE
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  BLE / out1
+======================================================================
+  Card Type  BLE  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  DEC  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  BLE / out2
+======================================================================
+  Card Type  BLE  Card In Event Keystrokes  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  FSK Prox (e.g. HID Prox, AWID) / card-data
+======================================================================
+  []  Card Type  FSK Prox (e.g. HID Prox, AWID)  Enable FSK Prox (e.g. HID Prox, AWID)  [ ]
+  Data Field  Enabled  Leading Byte  Reverse
+  []  PACS  [x]  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [0]  [0]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  FSK Prox (e.g. HID Prox, AWID) / input
+======================================================================
+  Card Type  FSK Prox (e.g. HID Prox, AWID)
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  FSK Prox (e.g. HID Prox, AWID) / out1
+======================================================================
+  Card Type  FSK Prox (e.g. HID Prox, AWID)  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  DEC  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  FSK Prox (e.g. HID Prox, AWID) / out2
+======================================================================
+  Card Type  FSK Prox (e.g. HID Prox, AWID)  Card In Event Keystrokes  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  PSK Prox (e.g. Indala) / card-data
+======================================================================
+  []  Card Type  PSK Prox (e.g. Indala)  Enable PSK Prox (e.g. Indala)  [ ]
+  Data Field  Enabled  Leading Byte  Reverse
+  []  PACS  [x]  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [0]  [0]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  PSK Prox (e.g. Indala) / input
+======================================================================
+  Card Type  PSK Prox (e.g. Indala)
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  PSK Prox (e.g. Indala) / out1
+======================================================================
+  Card Type  PSK Prox (e.g. Indala)  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  PSK Prox (e.g. Indala) / out2
+======================================================================
+  Card Type  PSK Prox (e.g. Indala)  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  ASK Prox (e.g. EM4450, Acura) / card-data
+======================================================================
+  []  Card Type  ASK Prox (e.g. EM4450, Acura)  Enable ASK Prox (e.g. EM4450, Acura)  [ ]
+  Data Field  Enabled  Leading Byte  Reverse
+  []  PACS  [x]  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [0]  [0]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  ASK Prox (e.g. EM4450, Acura) / input
+======================================================================
+  Card Type  ASK Prox (e.g. EM4450, Acura)
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  ASK Prox (e.g. EM4450, Acura) / out1
+======================================================================
+  Card Type  ASK Prox (e.g. EM4450, Acura)  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  ASK Prox (e.g. EM4450, Acura) / out2
+======================================================================
+  Card Type  ASK Prox (e.g. EM4450, Acura)  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  HID iCLASS / card-data
+======================================================================
+  []  Card Type  HID iCLASS  Enable HID iCLASS  [ ]
+  Data Field  Enabled  Leading Byte  Reverse  Key  Key Type  Book  Page  Block  Offset  Length
+  []  PACS  [x]  [ ]  None
+  []
+  []  []  CSN  [ ]  None
+  []
+  []  []  []  Custom 1  [ ]  None  [0]  Kd  [0]  [0]  [0]  [0]  [0]
+  []
+  []  []  []  Custom 2  [ ]  None  [0]  Kd  [0]  [0]  [0]  [0]  [0]
+  []
+  []  []  []  Custom 3  [ ]  None  [0]  Kd  [0]  [0]  [0]  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [14]  [20]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  HID iCLASS / input
+======================================================================
+  Card Type  HID iCLASS
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  HID iCLASS / out1
+======================================================================
+  Card Type  HID iCLASS  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  DEC  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  HID iCLASS / out2
+======================================================================
+  Card Type  HID iCLASS  Card In Event Keystrokes  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Classic / card-data
+======================================================================
+  []  Card Type  MIFARE Classic  Enable MIFARE Classic  [ ]
+  Data Field  Enabled  Leading Byte  Reverse  Key  Key Type  Sector  Block  Offset  Length
+  []  PACS  [x]  [ ]  None
+  []
+  []  []  CSN  [ ]  None
+  []
+  []  []  []  Custom 1  [ ]  None  [0]  A  [0]  [0]  [0]  [0]
+  []
+  []  []  []  Custom 2  [ ]  None  [0]  A  [0]  [0]  [0]  [0]
+  []
+  []  []  []  Custom 3  [ ]  None  [0]  A  [0]  [0]  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [0]  [0]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Classic / input
+======================================================================
+  Card Type  MIFARE Classic
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Classic / out1
+======================================================================
+  Card Type  MIFARE Classic  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Classic / out2
+======================================================================
+  Card Type  MIFARE Classic  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Ultralight / card-data
+======================================================================
+  []  Card Type  MIFARE Ultralight  Enable MIFARE Ultralight  [ ]
+  Data Field  Enabled  Reverse  Key  Page  Offset  Length
+  []  CSN  [x]  None
+  []
+  []  []  Custom 1  [ ]  None  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 2  [ ]  None  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 3  [ ]  None  [0]  [0]  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Ultralight / input
+======================================================================
+  Card Type  MIFARE Ultralight
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Ultralight / out1
+======================================================================
+  Card Type  MIFARE Ultralight  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Ultralight / out2
+======================================================================
+  Card Type  MIFARE Ultralight  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire / card-data
+======================================================================
+  []  Card Type  MIFARE Desfire  Enable MIFARE Desfire  [ ]
+  Data Field  Enabled  Reverse  App ID  File Num  Offset  Length  Card Key  Rdr Key  Auth  File Type  File Comms
+  []  CSN  [x]  None
+  []
+  []  []  []  []  Custom 1  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None
+  []
+  []  []  []  []  Custom 2  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None
+  []
+  []  []  []  []  Custom 3  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire / input
+======================================================================
+  Card Type  MIFARE Desfire
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire / out1
+======================================================================
+  Card Type  MIFARE Desfire  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire / out2
+======================================================================
+  Card Type  MIFARE Desfire  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV1 / card-data
+======================================================================
+  []  Card Type  MIFARE Desfire EV1  Enable MIFARE Desfire EV1  [ ]  CT value  [136]
+  Data Field  Enabled  Lead Byte  Reverse  App ID  File Num  Start  Len  Card Key  Rdr Key  Auth  File Type  File Comms  Encryption  AV1 Diversify
+  []  PACS  [x]  [ ]  None
+  []
+  []  []  CSN  [ ]  None
+  []
+  []  []  []  []  []  []  Custom 1  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None  DES/3DES  None
+  []
+  []  []  []  []  []  []  Custom 2  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None  DES/3DES  None
+  []
+  []  []  []  []  []  []  Custom 3  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None  DES/3DES  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Data Source  Reverse  Offset (Bits)  Length (Bits)
+  []  []  Custom 1  [ ]  Pacs  None  [0]  [0]
+  []  Custom 2  None  [0]  [0]
+  []  Custom 3  None  [0]  [0]
+  []  Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV1 / input
+======================================================================
+  Card Type  MIFARE Desfire EV1
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV1 / out1
+======================================================================
+  Card Type  MIFARE Desfire EV1  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  DEC  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV1 / out2
+======================================================================
+  Card Type  MIFARE Desfire EV1  Card In Event Keystrokes  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  [[LED_BUZZ]]  [[ENTER]]
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  [[ENTER]]
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV2 / card-data
+======================================================================
+  []  Card Type  MIFARE Desfire EV2  Enable MIFARE Desfire EV2  [ ]  CT value  [136]
+  Data Field  Enabled  Lead Byte  Reverse  App ID  File Num  Start  Len  Card Key  Rdr Key  Auth  File Type  File Comms  Encryption  AV1 Diversify
+  []  CSN  [x]  None
+  []
+  []  []  PACS  [x]  [ ]  None
+  []
+  []  []  []  []  []  []  Custom 1  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None  DES/3DES  None
+  []
+  []  []  []  []  []  []  Custom 2  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None  DES/3DES  None
+  []
+  []  []  []  []  []  []  Custom 3  [ ]  None  [1]  [0]  [0]  [0]  [0]  [240]  [ ]  Standard  None  DES/3DES  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Data Source  Reverse  Offset (Bits)  Length (Bits)
+  []  []  Custom 1  [ ]  Pacs  None  [0]  [0]
+  []  Custom 2  None  [0]  [0]
+  []  Custom 3  None  [0]  [0]
+  []  Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV2 / input
+======================================================================
+  Card Type  MIFARE Desfire EV2
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV2 / out1
+======================================================================
+  Card Type  MIFARE Desfire EV2  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Desfire EV2 / out2
+======================================================================
+  Card Type  MIFARE Desfire EV2  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Plus / card-data
+======================================================================
+  []  Card Type  MIFARE Plus  Enable MIFARE Plus  [ ]
+  Data Field  Enabled  Reverse  Key  Key Type  Sector  Block  Offset  Length
+  []  CSN  [x]  None
+  []
+  []  []  []  Custom 1  [ ]  None  [0]  A  [0]  [0]  [0]  [0]
+  []
+  []  []  []  Custom 2  [ ]  None  [0]  A  [0]  [0]  [0]  [0]
+  []
+  []  []  []  Custom 3  [ ]  None  [0]  A  [0]  [0]  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Plus / input
+======================================================================
+  Card Type  MIFARE Plus
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  MIFARE Plus / out1
+======================================================================
+  Card Type  MIFARE Plus  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  MIFARE Plus / out2
+======================================================================
+  Card Type  MIFARE Plus  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  FeliCa / card-data
+======================================================================
+  []  Card Type  FeliCa  Enable FeliCa  [ ]
+  Data Field  Enabled  Reverse  Service code  Block  Offset  Length
+  []  CSN  [x]  None
+  []
+  []  []  Custom 1  [ ]  None  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 2  [ ]  None  [0]  [0]  [0]  [0]
+  []
+  []  []  Custom 3  [ ]  None  [0]  [0]  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  FeliCa / input
+======================================================================
+  Card Type  FeliCa
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  FeliCa / out1
+======================================================================
+  Card Type  FeliCa  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  FeliCa / out2
+======================================================================
+  Card Type  FeliCa  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  PIV / card-data
+======================================================================
+  []  Card Type  PIV  Enable PIV  [ ]
+  Data Field  Enabled  Reverse
+  []  CSN  [x]  None
+  []
+  []  []  FASC-N  [x]  None
+  []
+  []  []  GUID  [ ]  None
+  []
+  []  []  75-bit GSA  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Remove Parity  Reverse BCD  Reverse  Offset (Bits)  Length (Bits)
+  []  FASC_N Custom 1  [ ]  [x]  [ ]  None  [0]  [0]
+  []  FASC_N Custom 2  None  [0]  [0]
+  []  FASC_N Custom 3  None  [0]  [0]
+  []  FASC_N Custom 4  None  [0]  [0]
+  []  FASC_N Custom 5  None  [0]  [0]
+  []  FASC_N Custom 6  None  [0]  [0]
+  []  FASC_N Custom 7  None  [0]  [0]
+  []  FASC_N Custom 8  None  [0]  [0]
+  []  FASC_N Custom 9  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  PIV / input
+======================================================================
+  Card Type  PIV
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  GUID  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  75-bit GSA  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  FASC-N Cust 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 5  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 6  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 7  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 8  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  FASC-N Cust 9  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  PIV / out1
+======================================================================
+  Card Type  PIV  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  GUID  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  75-bit GSA  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  FASC-N Cust 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 5  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 6  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 7  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 8  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  FASC-N Cust 9  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  PIV / out2
+======================================================================
+  Card Type  PIV  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  GUID  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  75-bit GSA  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  FASC-N Cust 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 5  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 6  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 7  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 8  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  FASC-N Cust 9  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  CEPAS / card-data
+======================================================================
+  []  Card Type  CEPAS  Enable CEPAS  [ ]
+  Data Field  Enabled  Reverse
+  []  CSN  [x]  None
+  []
+  []  []  CAN  [x]  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  CAN Custom 1  [ ]  None  [0]  [0]
+  []  CAN Custom 2  None  [0]  [0]
+  []  CAN Custom 3  None  [0]  [0]
+  []  CAN Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  CEPAS / input
+======================================================================
+  Card Type  CEPAS
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  CAN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CAN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CAN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CAN 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CAN 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  CEPAS / out1
+======================================================================
+  Card Type  CEPAS  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  CAN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CAN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CAN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CAN 3  ASCII  [ ]  Char  [ ]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CAN 4  ASCII  [ ]  Char  [ ]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  CEPAS / out2
+======================================================================
+  Card Type  CEPAS  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  CAN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CAN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CAN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CAN 3  [ ]  Char  [ ]  Direction  Leading  Length  [0]  []  []
+  []  Custom CAN 4  [ ]  Char  [ ]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443A / card-data
+======================================================================
+  []  Card Type  Generic ISO14443A  Enable Generic ISO14443A  [ ]
+  Data Field  Enabled  Leading Byte  Reverse
+  []  CSN  [ ]  None
+  []
+  []  []  PACS  [ ]  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [0]  [0]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443A / input
+======================================================================
+  Card Type  Generic ISO14443A
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443A / out1
+======================================================================
+  Card Type  Generic ISO14443A  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443A / out2
+======================================================================
+  Card Type  Generic ISO14443A  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443B / card-data
+======================================================================
+  []  Card Type  Generic ISO14443B  Enable Generic ISO14443B  [ ]
+  Data Field  Enabled  Leading Byte  Reverse
+  []  CSN  [x]  None
+  []
+  []  []  PACS  [x]  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [0]  [0]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443B / input
+======================================================================
+  Card Type  Generic ISO14443B
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443B / out1
+======================================================================
+  Card Type  Generic ISO14443B  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  Generic ISO14443B / out2
+======================================================================
+  Card Type  Generic ISO14443B  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+
+======================================================================
+Keyboard wedge  /  Generic ISO15693 / card-data
+======================================================================
+  []  Card Type  Generic ISO15693  Enable Generic ISO15693  [ ]
+  Data Field  Enabled  Leading Byte  Reverse
+  []  CSN  [x]  None
+  []
+  []  []  PACS  [x]  [ ]  None
+  Data Field  Enabled  Reverse  Offset (Bytes)  Length (Bytes)
+  []  CSN Custom 1  [ ]  None  [0]  [0]
+  []  CSN Custom 2  None  [0]  [0]
+  Data Field  Enabled  Reverse  Offset (Bits)  Length (Bits)
+  []  PACS Custom 1  [ ]  None  [0]  [0]
+  []  PACS Custom 2  None  [0]  [0]
+  []  PACS Custom 3  None  [0]  [0]
+  []  PACS Custom 4  None  [0]  [0]
+
+======================================================================
+Keyboard wedge  /  Generic ISO15693 / input
+======================================================================
+  Card Type  Generic ISO15693
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  CSN  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  PACS  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom CSN 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom CSN 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  Datafield  Bit padding  Reverse  Logic operation
+  []  []  []  []  Custom PACS 1  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 2  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 3  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+  []  []  []  []  Custom PACS 4  [ ]  Value  0  Dir  Leading  Length  [0]  None  None  Mask  []
+
+======================================================================
+Keyboard wedge  /  Generic ISO15693 / out1
+======================================================================
+  Card Type  Generic ISO15693  Hex Output Case  Upper
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  CSN  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  PACS  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom CSN 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom CSN 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  Datafield  String Format  String Filtering  String Truncating
+  []  []  []  Custom PACS 1  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 2  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 3  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+  []  []  []  Custom PACS 4  HEX  [ ]  Char  [0]  Direction  Leading  [ ]  Type  Cut off  Offset  [0]  Length  [0]
+
+======================================================================
+Keyboard wedge  /  Generic ISO15693 / out2
+======================================================================
+  Card Type  Generic ISO15693  Card In Event Keystrokes  [[LED_BUZZ]]
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  CSN  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  PACS  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom CSN 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom CSN 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  Datafield  String Padding  Prestrokes  Poststrokes
+  []  Custom PACS 1  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 2  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 3  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []
+  []  Custom PACS 4  [ ]  Char  [0]  Direction  Leading  Length  [0]  []  []

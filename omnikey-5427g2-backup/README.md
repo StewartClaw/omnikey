@@ -41,8 +41,9 @@ USB CDC EEM driver 3.15 (gives access to the reader's web console at http://192.
   (encrypted). Restore with System Config > Upload Config > Apply Changes.
 - `web-config/full-capture/` - readable record of **every** setting: raw reader
   responses for every value (`raw-mib-reads.json`), field values per page
-  (`page-values.json`), and screenshots of all 21 pages plus the keyboard wedge
-  pages for all 18 card types. Captured read-only (every request checked as a read).
+  (`page-values.json`), and `CONSOLE-PAGES.txt`, a text version of all 21 pages
+  plus the keyboard wedge pages for all 18 card types. Screenshots are kept
+  locally only (`web-config/screenshots/`, not in git). Captured read-only (every request checked as a read).
 - `web-config/SETTINGS.md` - summary of all values.
 - Re-capture script: `tools/console-capture/final.py`.
 
@@ -56,8 +57,8 @@ USB CDC EEM driver 3.15 (gives access to the reader's web console at http://192.
   of scope unless you plan to do it on purpose.
 
 ## To-do: finish the baseline (before changing anything)
-- [x] Screenshot every configuration page -> done via the web console
-      (`web-config/full-capture/screens/`), which covers more than Workbench.
+- [x] Record every configuration page -> done via the web console
+      (`web-config/full-capture/CONSOLE-PAGES.txt`), which covers more than Workbench.
 - [x] Core firmware version: 01.05.0203 (build 211, 2024-09-20); SIO 01.a6; BLE 06.07.
 - [x] Keyboard-wedge output format (from config): only Seos enabled; PACS as
       HEX (upper case), prestroke `[LED_BUZZ]`, poststroke `[ENTER]`; US layout,

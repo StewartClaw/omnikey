@@ -39,7 +39,7 @@ with sync_playwright() as p:
     b = p.chromium.launch(channel="chrome", headless=True)
     pg = b.new_page(viewport={"width": 960, "height": 680})
     pg.route("**/*", guard); pg.on("response", on_resp)
-    pg.goto("http://192.168.63.99/"); pg.wait_for_timeout(5000)
+    pg.goto("http://192.168.63.99/"); pg.wait_for_timeout(9000)
     def click(label):
         pos = pg.evaluate(FIND, label)
         if not pos: raise SystemExit("label not found: " + label)
@@ -62,7 +62,8 @@ with sync_playwright() as p:
               // only click if the option itself is what's under the pointer
               return (hit === e || e.contains(hit) || (hit && hit.contains(e) && (hit.innerText||'').trim() === t)) ? [x, y] : null;
             } } return null; }""", ct)
-        if not opt: raise SystemExit("option not clickable safely: " + ct)
+        if not opt:
+            print("SKIPPED (not safely clickable):", ct); pg.keyboard.press("Escape"); pg.wait_for_timeout(800); continue
         pg.mouse.click(opt[0], opt[1]); pg.wait_for_timeout(2500)
         for sub, label in KW_SUB:
             click(label)

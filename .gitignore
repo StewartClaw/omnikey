@@ -6,3 +6,7 @@ __pycache__/
 *.msi
 *.exe
 *.zip
+# Screenshots stay local (text versions are in web-config/full-capture/)
+*.jpg
+*.png
+omnikey-5427g2-backup/web-config/screenshots/

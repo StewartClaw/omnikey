@@ -15,6 +15,9 @@
       t = t.trim(); if (t) out.push([pos, 'text', t]);
     }
   }
+  try { const vs = uki('Checkbox');
+    for (let k = 0; k < vs.length; k++) { const r = vs[k].dom().getBoundingClientRect(); const s = getComputedStyle(vs[k].dom());
+      if (r.width > 0 && r.height > 0 && r.y > 150 && s.visibility !== 'hidden') out.push([[Math.round(r.x), Math.round(r.y)], 'check', vs[k].checked()]); } } catch (e) {}
   out.sort((a, b) => (a[0][1] - b[0][1]) || (a[0][0] - b[0][0]));
   return out.map(x => x.slice(1).concat([x[0]]));
 }
