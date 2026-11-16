@@ -1,10 +1,9 @@
 HID OMNIKEY 5427 G2 - DEVICE INFORMATION FOR RESEARCH
 IT&C 567 End of Semester Project
-Compiled: 2026-11-16
-Repo: https://github.com/StewartClaw/omnikey (private)
+Compiled: 2026-11-16 (updated with the web console backup, ~14:34)
 
 Confidence key:
-  [V] verified on our PC (Windows, Workbench API, logs)
+  [V] verified on our PC (Windows, Workbench API, reader web console, logs)
   [L] read from the label photo (could be an OCR/reading error)
   [I] our inference, not yet confirmed
 
@@ -70,15 +69,12 @@ USB interfaces, CCID mode (PID 5427):
 [V] MI_00  CCID smart card reader
            -> generic driver: "Microsoft Usbccid Smartcard Reader (WUDF)"
            -> with HID driver: "HID OMNIKEY 5427CK" (driver 2.3.4.121)
-[V] MI_01  CDC EEM -> still no driver (Code 28)
+[V] MI_01  CDC EEM -> Code 28 until HID's USB CDC EEM driver 3.15 was
+           installed; it now appears as a USB network adapter
 
 What is CDC EEM? A "USB network adapter" class (Ethernet Emulation Model).
-[I] HID's datasheet confirms the reader has an "integrated web-based
-    management tool" and accepts SNMP messages (section 5). The EEM network
-    interface is almost certainly how those are reached. HID ships a
-    "USB CDC EEM Driver" on the 5427CK product page. NOT YET EXPLORED.
-    This is the strongest attack-surface lead (default creds? HTTP vs HTTPS?
-    SNMP community strings?).
+[V] CONFIRMED: the EEM interface carries the reader's built-in web
+    management console. Details in section 4b.
 
 PC/SC reader names seen:
 [V] "HID OMNIKEY 5427 CK 0"      (Microsoft generic CCID driver)
@@ -102,6 +98,82 @@ PC/SC reader names seen:
 Workbench settings (all it exposes for this model):
 [V] IsEemInterfaceEnabled = true
 [V] OperatingMode         = 0 (CCID). It was keyboard wedge when received.
+
+
+======================================================================
+4b. READER WEB CONSOLE  (via USB CDC EEM, captured 2026-11-16 ~14:34)
+======================================================================
+Full read-only backup: omnikey-5427g2-backup/web-config/ (see SETTINGS.md).
+Nothing on the reader was changed.
+
+Access
+[V] URL ................. http://192.168.63.99/  (plain HTTP, no HTTPS)
+[V] Page title .......... "HID Global OMNIKEY 5x27 CK"
+[V] Login ............... NONE. Access Password is not set; the console
+                          shows "Please set Access Password..."
+[V] Password timeout .... 10 min (only applies once a password is set)
+[V] Signing / Verification key: blank
+
+General overview
+[V] Firmware ............ 01.05.0203 (matches Workbench)
+[V] MAC address ......... 10:00:00:0F:C1:01
+[V] Unique ID ........... 010100533056533934055B4634254630 (= USB serial)
+[V] CCID slots .......... 1
+
+Host interfaces
+[V] IP / mask / gateway . 192.168.63.99 / 255.255.255.0 / 192.168.63.1
+                          (point-to-point link to the host PC only)
+[V] Host name ........... ok5x27_ck
+[V] EEM Enable .......... ON
+[V] TFTP Enable ......... ON  ("TFTP server for firmware and configuration
+                          management")
+[V] Keyboard wedge USB endpoint: Endpoint 3
+
+Contactless > Polling  (which card technologies are ENABLED - BYU config)
+[V] ENABLED ............. ISO 14443 Type A, Prox, BLE, Config cards
+[V] DISABLED ............ ISO 14443 Type B, FeliCa, iCLASS 14443 Type B,
+                          iCLASS 15693, ISO 15693
+[I] Seos runs over ISO 14443 A, so Seos cards should still read. Legacy
+    iCLASS (15693 / 14443 B) looks switched off - worth testing.
+[V] Polling ............. Frequency 1, Delay 0, Removal Delay 5,
+                          Removal Persist 2, RF Field Off Delay 5,
+                          RF Field On Delay 20, EMD Enable OFF,
+                          EMD Frame Length 3, Enhanced Polling OFF
+[V] Tech order .......... Seos, FSK Prox (HID Prox/AWID), Generic ISO14443A,
+                          HID iCLASS, BLE, MIFARE Classic, MIFARE Ultralight,
+                          MIFARE DESFire (/EV1/EV2), MIFARE Plus, ...
+
+Keyboard wedge > General config
+[V] Keyboard Wedge Enable  OFF (reader is in CCID mode right now)
+[V] Output type ......... Keyboard Wedge | Boot Interface OFF
+[V] Layout .............. US | Hex output case Upper | Inter-keystroke delay 20
+[V] Host OS ............. Windows | Custom CSN resolution: Bytes
+[V] Multi PACS length ... OFF
+[V] KW Encryption ....... OFF (no encryption key set)
+[V] Error / card-out keystrokes blank | Tech order after error ON
+
+System config page
+[V] Buttons: Update Firmware, Upload Config, Encrypt Firmware,
+    Load Key Layout, Update BLE Firmware, Export Config, Apply Changes,
+    Restore Default, Reboot System.  -> NEVER press Restore Default.
+
+Console functions seen in the front-end (webserver.js)
+[V] GET  /ok5x27_ck.cfg    Export Config (encrypted file; we saved a copy)
+[V] POST /poster.txt       Upload Config / Update Firmware /
+                           Update BLE Firmware (Nordic BLE chip)
+[V] GET  /signed.fw        "Get Signed" firmware download form
+[V] "comet" long-poll channel for live status
+[V] Also mentions "simplified SNMP messages" and PseudoAPDU access
+    (see the 5x27 manual)
+[I] The BLE firmware upload label ("Nordic") suggests a Nordic
+    Semiconductor BLE chip - confirm with the FCC internal photos.
+
+Restore point
+[V] omnikey-5427g2-backup/web-config/ok5x27_ck.cfg (2537 bytes, encrypted)
+    To restore: console > System Config > "Upload Config" > choose this
+    file > "Apply Changes". Screenshots in the same folder are the
+    human-readable fallback, but only 4 pages were screenshotted (see
+    SETTINGS.md for the pages that are only in the .cfg).
 
 
 ======================================================================
@@ -172,9 +244,11 @@ KEYBOARD WEDGE FEATURES
 
 MANAGEMENT / CONFIGURATION CHANNELS  (attack surface!)
   1. Integrated web-based management tool (browser-based) "without special
-     training" [I: served over the USB CDC EEM network interface]
+     training" [V: http://192.168.63.99 over USB CDC EEM, NO password set]
+  1a. TFTP server for firmware/config transfer [V: enabled]
   2. SNMP messages (firmware updates and configuration)
   3. Configuration cards (tapping a special card reconfigures the reader)
+     [V: "Config cards" is enabled in Polling]
   4. HID protocol from the host (keyboard wedge mode)
   5. OMNIKEY Workbench (PC/SC escape commands, CCID mode)
   6. HID mobile app over BLE (mobile read settings)
@@ -197,7 +271,8 @@ OPERATING CONDITIONS
 COMPLIANCE
   USB 2.0; CE, UKCA, FCC, UL, KCC (Korea), RCM (Australia); WEEE, RoHS3, REACH
 
-TODO: confirm which technologies are actually ENABLED on this unit (BYU config).
+Technologies actually ENABLED on this unit (BYU config): see section 4b.
+Note 125 kHz Prox IS enabled, so the reader accepts unencrypted LF cards.
 
 
 ======================================================================
@@ -213,7 +288,17 @@ TODO: confirm which technologies are actually ENABLED on this unit (BYU config).
   Workbench's code documents the MIB control commands Apply / Reset / Store /
   Restore / Reboot. Source: OMNIKEY 5x27 Software Developer Guide, Appendix B.2.3.3.
 - Keyboard wedge mode sends the card number as plain keystrokes. Any app with
-  focus, including a keylogger, receives it.
+  focus, including a keylogger, receives it. KW Encryption is OFF. [V]
+- The web console is plain HTTP with NO access password. Anything that can
+  reach 192.168.63.99 over the EEM link can read and change the config and
+  reach the firmware/config upload. [V]
+- "Config cards" polling is enabled: a configuration card could reprogram
+  the reader. [V]
+- TFTP is enabled: an extra firmware/config transfer channel is open. [V]
+- Prox (125 kHz, no crypto) is enabled alongside iCLASS/Seos. [V]
+- The exported config file is encrypted, so it can be restored but not
+  read or edited directly. [V]
+These findings are recorded only. Nothing was changed on the reader.
 
 
 ======================================================================
@@ -225,7 +310,7 @@ TODO: confirm which technologies are actually ENABLED on this unit (BYU config).
     File: sfw-01556-revc-hid-omnikey-ccid-driver-2.3.4.121.zip
     MSI signed by "HID Global" (Austin, TX) - signature valid
     Optional MSI feature "CleanRegTree" only removes registry keys on uninstall
-[ ] USB CDC EEM Driver (not installed yet)  -> 5427CK product page:
+[V] USB CDC EEM Driver 3.15 (installed)   -> 5427CK product page:
     https://www.hidglobal.com/products/omnikey-5427ck
 WRONG software (for FARGO card PRINTERS, not this reader):
     FARGO Workbench, DTC1250e printer driver
@@ -275,19 +360,27 @@ Server docs: ...\OMNIKEY Workbench Tool\resources\backend\wb-core.xml
        Windows logged the switch: the reader came back as PID 5427.
 ~14:10 HID CCID driver 2.3.4.121 installed
 14:14  Diagnostics and settings saved to omnikey-5427g2-backup/
+~14:30 USB CDC EEM driver 3.15 installed; reader reachable at 192.168.63.99
+14:34  Web console config exported (ok5x27_ck.cfg) and 4 pages
+       screenshotted to omnikey-5427g2-backup/web-config/ (read-only)
 
 
 ======================================================================
 10. OPEN QUESTIONS / RESEARCH LEADS FOR THE TEAM
 ======================================================================
- 1. Install the CDC EEM driver: what network service does the reader expose?
-    IP, ports, web page, SNMP, authentication? (scan only the reader's interface)
- 1b. Configuration cards: can anyone with a config card reprogram the reader?
-    Is the card authenticated/signed? (Read HID docs before trying anything.)
+ 1. DONE: web console found at http://192.168.63.99 with no password.
+    Still open: which other ports/services are listening (SNMP? TFTP on
+    UDP 69?). Scan only the reader's 192.168.63.0/24 link.
+ 1a. Does TFTP allow reading or writing config/firmware without auth?
+    (Read-only checks; never upload firmware.)
+ 1b. Configuration cards ARE enabled. Is a config card authenticated/signed,
+    or can anyone with one reprogram the reader? (Read HID docs first.)
+ 1c. Is the encrypted ok5x27_ck.cfg tied to this unit, or can it be
+    loaded on any 5x27 reader?
  2. Get the "OMNIKEY 5x27 Software Developer Guide" from HID (escape commands,
     MIB/config layout, keyboard wedge format options).
  3. FCC ID JQ6-OK5427G2: internal photos -> main MCU, SAM chip, BLE chip.
- 4. Which card technologies are enabled on this unit (BYU config)?
+ 4. DONE: enabled technologies are listed in section 4b.
  5. What exactly does keyboard wedge mode type for a BYU card (format, bits)?
     Use test cards only.
  6. Does the Workbench API accept cross-site POSTs (CSRF)? Can a local
@@ -308,10 +401,15 @@ Credentials
     number), as the identifier. A CSN alone is not a secret.
 
 Management interfaces
+  - Set an Access Password on the web console (ours has none).
   - Disable the EEM web interface when it isn't needed
-    (IsEemInterfaceEnabled = false). If it's needed, set a strong admin password.
+    (IsEemInterfaceEnabled = false / EEM Enable OFF).
+  - Disable TFTP if it isn't used (ours is ON).
   - Turn off SNMP or restrict it; change default community strings.
-  - Control who holds configuration cards. Treat them like admin keys.
+  - Disable "Config cards" polling if not needed (ours is ON). Otherwise,
+    control who holds configuration cards. Treat them like admin keys.
+  - Disable Prox (125 kHz) if the organization doesn't issue Prox cards.
+  - Turn on Keyboard Wedge Encryption if wedge mode is used.
   - Keep firmware current using ONLY HID-signed updates from hidglobal.com.
 
 Host PC
@@ -348,3 +446,5 @@ Ground rules (put these in the scoping / RoE document):
   - BYU-owned device: no factory reset, no firmware update, no key extraction
   - Use only our own / test credentials; redact card numbers in reports
   - Record every settings change in omnikey-5427g2-backup/README.md before making it
+  - Restore point: web-config/ok5x27_ck.cfg via the console's "Upload Config"
+  - No uploads through /poster.txt or TFTP except restoring our own config

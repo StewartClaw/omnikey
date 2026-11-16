@@ -23,8 +23,9 @@ Read-only capture. Nothing on the reader was changed.
 - Keyboard Wedge USB Endpoint: Endpoint 3
 
 ## Contactless Config > Polling (enabled card technologies)
-- ENABLED:  ISO 14443 Type A, iCLASS 14443 Type B, Prox, BLE, Config cards
-- DISABLED: ISO 14443 Type B, FeliCa, iCLASS 15693, ISO 15693
+- ENABLED:  ISO 14443 Type A, Prox, BLE, Config cards
+- DISABLED: ISO 14443 Type B, FeliCa, iCLASS 14443 Type B, iCLASS 15693, ISO 15693
+  (corrected 2026-11-16 from the screenshot: iCLASS 14443 Type B is unchecked)
 - Polling: Frequency 1, Delay 0, Removal Delay 5, Removal Persist 2,
   RF Field Off Delay 5, RF Field On Delay 20, EMD Enable OFF, EMD Frame Length 3,
   Enhanced Polling OFF
@@ -37,10 +38,23 @@ Read-only capture. Nothing on the reader was changed.
 - Keyboard Layout: US | Hex Output Case: Upper | Inter-Keystroke Delay: 20
 - Host OS: Windows | Custom CSN Resolution: Bytes | Multi PACS length: OFF
 - Keyboard Wedge Encryption: OFF (no encryption key set)
+- Card Out Event Keystrokes: blank | Error Keystrokes: blank
+- Allow prestrokes/poststrokes for errors: OFF | Tech order after error: ON
 
 ## System Config
 - Access Password: NOT SET (console shows "Please set Access Password...")
 - Password timeout: 10 mins | Signing Key / Verification Key: blank
+- Buttons on this page: Update Firmware, Upload Config, Encrypt Firmware,
+  Load Key Layout, Update BLE Firmware, Export Config, Apply Changes,
+  Restore Default, Reboot System. Do NOT press Restore Default.
+
+## Not captured as screenshots
+Only the 4 pages above were screenshotted. These pages have no screenshot, so
+the encrypted .cfg is the only record of them: General Overview, Reader
+Information, Antennas, LEDs & Buzzer, the per-technology pages (ISO14443A/B,
+ISO15693, FeliCa, iCLASS, Prox, BLE), Keyboard Wedge > Card Data Selection,
+Input Data Manipulation, Out 1 / Out 2 Data Manipulation, System Consoles.
+The full Tech Order list is also cut off (it scrolls).
 
 ## Security observations (for the report, not acted on)
 - The management console is reachable with NO password. Anyone who can reach the
