@@ -153,7 +153,7 @@ Contactless > per-technology pages
 [V] iCLASS .............. 14443 B OFF, 15693 OFF, No Range Check ON,
                           High Security Mode OFF
 [V] Prox ................ enabled, ATR mode PROX_STANDARD, no custom format
-[V] BLE ................. enabled; chip UUID 0000000000000001000800000177a000002;
+[V] BLE ................. enabled; chip UUID 0000000000001000800000177a000002;
                           static random address aff70cee365d; brand HID Global;
                           Tap In ON (-40 dBm), Twist and Go OFF (-74 dBm),
                           Tx power -4 dBm

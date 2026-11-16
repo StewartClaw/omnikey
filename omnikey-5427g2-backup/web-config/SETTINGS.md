@@ -87,7 +87,7 @@ The `.cfg` export is still the restore point. These files are the readable recor
 - **iCLASS:** 14443 B OFF, 15693 OFF, No Range Check ON (greyed), **High Security Mode OFF**;
   Tchip 543 / 2116, Tout 6780 / 12204, ACTALL 27120, Tprog 108480.
 - **Prox:** enabled, ATR mode PROX_STANDARD, custom Prox format all 0.
-- **BLE:** enabled; chip UUID `0000000000000001000800000177a000002`; static random
+- **BLE:** enabled; chip UUID `0000000000001000800000177a000002`; static random
   address `aff70cee365d`; brand HID Global; Tap In ON, Twist and Go OFF;
   Tap In range -40 dBm, Twist and Go range -74 dBm, Tx power -4 dBm.
 - **System Consoles:** Debug Console, empty (nothing typed; typing there sends commands).
