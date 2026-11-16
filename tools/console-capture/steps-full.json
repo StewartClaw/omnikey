@@ -1,0 +1,23 @@
+[
+ ["01-general-overview", ["General Overview"]],
+ ["02-reader-information", ["Reader Information"]],
+ ["03-kw-general-config", ["Keyboard Wedge", "General Config"]],
+ ["04-kw-card-data-selection", ["Card Data Selection"]],
+ ["05-kw-input-data-manipulation", ["Input Data Manipulation"]],
+ ["06-kw-out1-data-manipulation", ["Out 1 Data Manipulation"]],
+ ["07-kw-out2-data-manipulation", ["Out 2 Data Manipulation"]],
+ ["08-cl-polling", ["Contactless Config", "Polling Config"]],
+ ["09-cl-antennas", ["Antennas Config"]],
+ ["10-cl-leds-buzzer", ["LEDs & Buzzer"]],
+ ["11-cl-iso14443a", ["ISO14443A Config"]],
+ ["12-cl-iso14443b", ["ISO14443B Config"]],
+ ["13-cl-iso15693", ["ISO15693 Config"]],
+ ["14-cl-felica", ["FeliCa Config"]],
+ ["15-cl-iclass", ["iCLASS Config"]],
+ ["16-cl-prox", ["Prox Config"]],
+ ["17-cl-ble", ["BLE Config"]],
+ ["18-host-interfaces", ["Host Interfaces"]],
+ ["19-system-config", ["System Config"]],
+ ["20-system-consoles", ["System Consoles"]],
+ ["21-about", ["About"]]
+]

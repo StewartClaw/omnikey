@@ -141,7 +141,35 @@ Contactless > Polling  (which card technologies are ENABLED - BYU config)
                           EMD Frame Length 3, Enhanced Polling OFF
 [V] Tech order .......... Seos, FSK Prox (HID Prox/AWID), Generic ISO14443A,
                           HID iCLASS, BLE, MIFARE Classic, MIFARE Ultralight,
-                          MIFARE DESFire (/EV1/EV2), MIFARE Plus, ...
+                          MIFARE DESFire, DESFire EV1, DESFire EV2, MIFARE Plus,
+                          FeliCa, PIV, CEPAS, PSK Prox (Indala),
+                          ASK Prox (EM4450), Generic ISO14443B, Generic ISO15693
+
+Contactless > per-technology pages
+[V] Antennas ............ 1, Combined, Automatic, Antenna 0 enabled, 1 slot
+[V] ISO14443A ........... enabled, anti-collision ON, max Tx/Rx 106k
+[V] ISO14443B ........... disabled, max Tx/Rx 424k
+[V] ISO15693 / FeliCa ... disabled
+[V] iCLASS .............. 14443 B OFF, 15693 OFF, No Range Check ON,
+                          High Security Mode OFF
+[V] Prox ................ enabled, ATR mode PROX_STANDARD, no custom format
+[V] BLE ................. enabled; chip UUID 0000000000000001000800000177a000002;
+                          static random address aff70cee365d; brand HID Global;
+                          Tap In ON (-40 dBm), Twist and Go OFF (-74 dBm),
+                          Tx power -4 dBm
+[V] LEDs & Buzzer ....... KW sequence: LED2+buzzer 100 ms, 50 ms, LED1 50 ms
+    (Timing values and antenna registers: see SETTINGS.md / full-capture.)
+
+Reader information page
+[V] Main firmware ....... 01.05.0203, build 211, built 2024-09-20 10:48:25
+                          (rev 20240920T124303-a0cf96db74e1+)
+[V] SIO firmware ........ 01.a6 (= SAM version)   BLE firmware 06.07
+[V] Board type .......... OMNIKEY 5427 Gen2 | HW 00 | Mod number 0
+[V] Host interfaces ..... USB | Antennas 1 | Enabled Features: None
+[V] OS / stack (About) .. FreeRTOS V10.4.3 LTS Patch 2, uIP TCP/IP,
+                          Atmel AT91 libraries, lwIP AutoIP
+[I] "AT91" suggests a Microchip/Atmel AT91 (ARM) main MCU - confirm with
+    the FCC internal photos.
 
 Keyboard wedge > General config
 [V] Keyboard Wedge Enable  OFF (reader is in CCID mode right now)
@@ -151,6 +179,15 @@ Keyboard wedge > General config
 [V] Multi PACS length ... OFF
 [V] KW Encryption ....... OFF (no encryption key set)
 [V] Error / card-out keystrokes blank | Tech order after error ON
+
+Keyboard wedge > per card type (all 18 card types checked)
+[V] Only SEOS has "Enable" ticked. BLE, FSK/PSK/ASK Prox, HID iCLASS, all
+    MIFARE types, FeliCa, PIV, CEPAS and Generic 14443A/B/15693 are NOT
+    enabled for wedge output.
+[V] Seos output (Out 2): prestroke [LED_BUZZ], poststroke [ENTER];
+    string format HEX; no padding, filtering or truncating
+[I] So in wedge mode a BYU Seos card should type a HEX number + Enter,
+    and Prox/iCLASS cards should type nothing. Confirm with a test card.
 
 System config page
 [V] Buttons: Update Firmware, Upload Config, Encrypt Firmware,
@@ -171,9 +208,11 @@ Console functions seen in the front-end (webserver.js)
 Restore point
 [V] omnikey-5427g2-backup/web-config/ok5x27_ck.cfg (2537 bytes, encrypted)
     To restore: console > System Config > "Upload Config" > choose this
-    file > "Apply Changes". Screenshots in the same folder are the
-    human-readable fallback, but only 4 pages were screenshotted (see
-    SETTINGS.md for the pages that are only in the .cfg).
+    file > "Apply Changes".
+[V] Readable record of every setting: web-config/full-capture/
+    raw-mib-reads.json (raw values for every setting), page-values.json,
+    and screenshots of all 21 pages + keyboard wedge pages for all 18
+    card types. Captured read-only; every request checked as a read.
 
 
 ======================================================================
@@ -363,6 +402,9 @@ Server docs: ...\OMNIKEY Workbench Tool\resources\backend\wb-core.xml
 ~14:30 USB CDC EEM driver 3.15 installed; reader reachable at 192.168.63.99
 14:34  Web console config exported (ok5x27_ck.cfg) and 4 pages
        screenshotted to omnikey-5427g2-backup/web-config/ (read-only)
+~15:30 Full read-only capture of every console page and all 18 keyboard
+       wedge card types -> web-config/full-capture/ (scripted headless
+       Chrome; all 516 MIB requests verified as reads)
 
 
 ======================================================================
@@ -379,9 +421,11 @@ Server docs: ...\OMNIKEY Workbench Tool\resources\backend\wb-core.xml
     loaded on any 5x27 reader?
  2. Get the "OMNIKEY 5x27 Software Developer Guide" from HID (escape commands,
     MIB/config layout, keyboard wedge format options).
- 3. FCC ID JQ6-OK5427G2: internal photos -> main MCU, SAM chip, BLE chip.
+ 3. FCC ID JQ6-OK5427G2: internal photos -> main MCU (AT91?), SAM chip,
+    BLE chip (Nordic?).
  4. DONE: enabled technologies are listed in section 4b.
- 5. What exactly does keyboard wedge mode type for a BYU card (format, bits)?
+ 5. Config says only Seos is output in wedge mode, as HEX + Enter (4b).
+    Confirm what a BYU Seos card actually types, and that Prox/iCLASS type nothing.
     Use test cards only.
  6. Does the Workbench API accept cross-site POSTs (CSRF)? Can a local
     non-admin process change the reader's mode?

@@ -33,24 +33,36 @@ Raw responses: `workbench-readerDiagnostic.json`, `workbench-readerSettings.json
 **Mode history:** the reader came in keyboard-wedge mode (USB PID 5428). On 2026-11-16
 at 13:46 it was switched to CCID mode (PID 5427) through Workbench. To restore it,
 switch it back to keyboard wedge in Workbench and confirm the PID is 5428 again.
-**Drivers added:** HID OMNIKEY CCID Driver 2.3.4.121, OMNIKEY Workbench Tool 2.7.0.
+**Drivers added:** HID OMNIKEY CCID Driver 2.3.4.121, OMNIKEY Workbench Tool 2.7.0,
+USB CDC EEM driver 3.15 (gives access to the reader's web console at http://192.168.63.99).
+
+## Web console backup (`web-config/`)
+- `web-config/ok5x27_ck.cfg` - **restore point**: the console's Export Config file
+  (encrypted). Restore with System Config > Upload Config > Apply Changes.
+- `web-config/full-capture/` - readable record of **every** setting: raw reader
+  responses for every value (`raw-mib-reads.json`), field values per page
+  (`page-values.json`), and screenshots of all 21 pages plus the keyboard wedge
+  pages for all 18 card types. Captured read-only (every request checked as a read).
+- `web-config/SETTINGS.md` - summary of all values.
+- Re-capture script: `tools/console-capture/final.py`.
 
 ## What can and can't be backed up
-- **Settings:** Workbench can't export them to a file. The reader stores its own
-  backup copy of the settings in flash. It also has a factory-restore command
-  (MIB "Restore") that sets the active and backup settings back to defaults. This
-  file is your record of the original values.
+- **Settings:** Workbench can't export them, but the web console can
+  (`ok5x27_ck.cfg` above). The reader also stores its own backup copy in flash,
+  and has a factory-restore command (MIB "Restore" / console "Restore Default")
+  that sets everything back to defaults. **Don't use it** (BYU Elite config).
 - **Firmware:** You can't dump or back it up. A firmware update is the only
   change that could brick the reader, and it can't be rolled back. Leave it out
   of scope unless you plan to do it on purpose.
 
-## To-do: finish the baseline in Workbench (before changing anything)
-- [ ] Screenshot every Workbench page for the reader, including each
-      Configuration / Extended Modules page, and save the images in `screenshots/`.
-- [ ] Write down the current core firmware version: ____________
-- [ ] Write down the keyboard-wedge output format (decimal or hex, byte order,
-      prefix/suffix, Enter after the number): ____________
-- [ ] Tap each test card in Notepad and paste the output below.
+## To-do: finish the baseline (before changing anything)
+- [x] Screenshot every configuration page -> done via the web console
+      (`web-config/full-capture/screens/`), which covers more than Workbench.
+- [x] Core firmware version: 01.05.0203 (build 211, 2024-09-20); SIO 01.a6; BLE 06.07.
+- [x] Keyboard-wedge output format (from config): only Seos enabled; PACS as
+      HEX (upper case), prestroke `[LED_BUZZ]`, poststroke `[ENTER]`; US layout,
+      20 ms inter-keystroke delay. Byte order / bit length still to confirm with a card.
+- [ ] Tap each test card in Notepad (in keyboard wedge mode) and paste the output below.
 
 | Card | Technology (Workbench) | Wedge output |
 |---|---|---|
@@ -59,5 +71,6 @@ switch it back to keyboard wedge in Workbench and confirm the PID is 5428 again.
 ## Safe-use rules
 1. Change one setting at a time. Screenshot the page before and after, then click Apply.
 2. Don't unplug the reader during a firmware upload.
-3. Recovery order: change the setting back by hand, then use the factory
-   restore, then compare the result against this file.
+3. Recovery order: change the setting back by hand; if that fails, upload
+   `web-config/ok5x27_ck.cfg` and Apply Changes; then compare against
+   `web-config/full-capture/`. Factory restore is the very last resort.
